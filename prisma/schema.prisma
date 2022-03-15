@@ -1,0 +1,53 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id   String @id @default(uuid())
+  name String @db.VarChar(255)
+
+}
+
+model Admin {
+  id          String  @id @default(uuid())
+  usuario     String  @db.VarChar(50)
+  nombre      String  @db.VarChar(100)
+  apellidoPat String  @db.VarChar(100)
+  apellidoMat String  @db.VarChar(100)
+  correo      String  @db.VarChar(100)
+  isEnable    Boolean @default(true)
+  // foto
+  // contrasena
+}
+
+model alumno {
+  //id          String  @id @default(uuid())
+  codigo      String  @id @db.VarChar(9)
+  matricula   String  @db.VarChar(6)
+  nombre      String  @db.VarChar(100)
+  apellidoPat String  @db.VarChar(100)
+  apellidoMat String  @db.VarChar(100)
+  correo      String  @db.VarChar(100)
+  isEnable    Boolean @default(true)
+  // foto
+  // contrasena
+}
+
+model docente {
+  codigo      String  @id @db.VarChar(9)
+  nombre      String  @db.VarChar(100)
+  apellidoPat String  @db.VarChar(100)
+  apellidoMat String  @db.VarChar(100)
+  correo      String  @db.VarChar(100)
+  isEnable    Boolean @default(true)
+  // foto
+  // contrasena
+}
