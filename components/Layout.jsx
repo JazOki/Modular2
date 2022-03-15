@@ -5,9 +5,9 @@ const Layout = ({children, nombre, matricula, codigo}) => {
           //parte de izquiero
       }
       <div className="bg-blue-900 text-right h-14 w-full flex items-center justify-center">
-      <span className="text-white material-icons">account_circle </span>
-      <span className="text-white font-serif  flex items-center"> {nombre}</span>
-      <p className="style=margin-left: 10px text-white h-11 font-serif flex text-center items-start justify-start">Alumno</p>
+        <span className="text-white material-icons">account_circle </span>
+        <span className="text-white font-serif  flex items-center"> {nombre}</span>
+        <p className="style=margin-left: 10px text-white h-11 font-serif flex text-center items-start justify-start">Alumno</p>
       </div>
       <div className="h-full p-0">{children}</div>
       {
