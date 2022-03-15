@@ -6,7 +6,7 @@ const LogIn = () => {
                 <span class="material-icons-outlined text-white items-center"> account_circle
                 </span>
                 <div className="font-serif text-left text-xl pl-10 text-white "> Correo institucional: </div>
-                <div className="pl-10 w-16"> <input type="text"></input> </div>
+                <div className="pl-10"> <input type="text" className="w- "></input> </div>
             </div>
             <div id="contenedorDerecho" className="w-full flex flex-col"></div>
         </div>
