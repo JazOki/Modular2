@@ -1,11 +1,9 @@
-const login = () => {
+const LogIn = () => {
     return (
-      <div className="h-screen w-screen flex">
-        
-        <div className="w-50 h-screen bg-gray-100"></div>
-        <div></div>
-      </div>
-    );
-  };
-  
-  export default login;
+        <div id="contenedorPrincipal" className="h-screen w-screen flex">
+            <div className="w-66 h-screen bg-gray-700"></div>
+        </div>
+    )
+}
+
+export default LogIn
