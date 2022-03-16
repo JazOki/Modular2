@@ -12,7 +12,7 @@ const LogIn = () => {
                 </div>
                 <p className="font-serif text-left text-xl pl-24 pt-5 text-white top-56"> Contraseña: </p>
                 <div className="pl-24 pt-2"><input type="password" className="w-80 rounded"></input> </div>
-                <span class="material-icons-outlined text-white text-3xl ">
+                <span class="material-icons-outlined text-white text-3xl">
                     visibility
                 </span>
                 <p className="font-serif text-left text-xl text-white pl-24 pt-5"> Usuario: </p>
