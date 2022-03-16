@@ -3,7 +3,7 @@ const LogIn = () => {
         <div id="contenedorPrincipal" className="h-screen w-screen flex">
             <div id="contenedorIzquierdo" className="w-2/3 h-screen bg-gray-800">
                 <div className="font-serif text-center text-4xl pt-10 text-white">  ¡Bienvenido! </div>
-                <span id="iconoLogIn" class="material-icons-outlined text-white pt-5 flex justify-center text-9xl">
+                <span id="iconoLogIn" className="material-icons-outlined text-white pt-5 flex justify-center text-9xl">
                     account_circle
                 </span>
                 <p className="font-serif text-left text-xl pl-24 pt-5 text-white"> Correo institucional: </p>
@@ -12,7 +12,7 @@ const LogIn = () => {
                 </div>
                 <p className="font-serif text-left text-xl pl-24 pt-5 text-white top-56"> Contraseña: </p>
                 <div className="pl-24 pt-2"><input type="password" className="w-80 rounded"></input> </div>
-                <span class="material-icons-outlined text-white text-3xl ">
+                <span className="material-icons-outlined text-white text-3xl">
                     visibility
                 </span>
                 <p className="font-serif text-left text-xl text-white pl-24 pt-5"> Usuario: </p>
@@ -33,7 +33,7 @@ const LogIn = () => {
             </div>
             <div id="contenedorDerecho" className="w-full flex flex-col">
                 <div className="text-center pt-56">
-                    <span class="material-icons-outlined text-9xl">
+                    <span className="material-icons-outlined text-9xl">
                         book
                     </span>
                     <p className="font-serif text-xl"> Gestor de proyectos <br /> modulares </p>

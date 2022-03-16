@@ -24,11 +24,11 @@ model Admin {
   apellidoMat String  @db.VarChar(100)
   correo      String  @db.VarChar(100)
   isEnable    Boolean @default(true)
-  // foto
-  // contrasena
+  foto        String  @db.Text
+  contrasena  String  @db.VarChar(255)
 }
 
-model alumno {
+model Alumno {
   //id          String  @id @default(uuid())
   codigo      String  @id @db.VarChar(9)
   matricula   String  @db.VarChar(6)
@@ -37,17 +37,60 @@ model alumno {
   apellidoMat String  @db.VarChar(100)
   correo      String  @db.VarChar(100)
   isEnable    Boolean @default(true)
-  // foto
-  // contrasena
+  foto        String  @db.Text
+  contrasena  String  @db.VarChar(255)
+
+  docente       Docente @relation(fields: [docenteCodigo], references: [codigo])
+  docenteCodigo String  @db.VarChar(9)
 }
 
-model docente {
-  codigo      String  @id @db.VarChar(9)
-  nombre      String  @db.VarChar(100)
-  apellidoPat String  @db.VarChar(100)
-  apellidoMat String  @db.VarChar(100)
-  correo      String  @db.VarChar(100)
-  isEnable    Boolean @default(true)
-  // foto
-  // contrasena
+model Docente {
+  codigo      String   @id @db.VarChar(9)
+  nombre      String   @db.VarChar(100)
+  apellidoPat String   @db.VarChar(100)
+  apellidoMat String   @db.VarChar(100)
+  correo      String   @db.VarChar(100)
+  isEnable    Boolean  @default(true)
+  foto        String   @db.Text
+  contrasena  String   @db.VarChar(255)
+  alumnos     Alumno[]
+}
+
+model ProyectoE1 {
+  id            String   @id @default(uuid())
+  urldocumento  String   @db.Text
+  estado        Estado   @default(Entregado)
+  observacion   String   @db.VarChar(300)
+  fechaRegistro DateTime @db.Date
+
+}
+
+model ProyectoE2 {
+  id            String     @id @default(uuid())
+  urldocumento  String     @db.Text
+  estado        Estado     @default(Entregado)
+  evaluacion    Evaluacion @default(Sin_evaluar)
+  observacion   String     @db.VarChar(300)
+  fechaRegistro DateTime   @db.Date
+}
+
+model ProyectoE3 {
+  id            String   @id @default(uuid())
+  urldocumento  String   @db.Text
+  estado        Estado   @default(Entregado)
+  observacion   String   @db.VarChar(300)
+  fechaRegistro DateTime @db.Date
+}
+
+enum Estado {
+  Entregado
+  Debe_modificarse
+  Revisado
+  Modificado
+}
+
+enum Evaluacion {
+  Acreditado
+  No_acreditado
+  Sin_evaluar
 }
