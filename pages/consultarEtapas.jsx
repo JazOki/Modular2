@@ -8,7 +8,7 @@ const consultarEtapas = () => {
                 <div className="font-serif w-3/5 h-96  pl-14 pt-7 bg-gray-600">
                     <p className="font-serif w-50 h-50 bg-gray-600 text-white">Estado:
                         <input type="text" className="telf pl-16 pt-4 w-40 h-9"></input></p>
-                    <p className="font-serif w-60 h-72 left bg-gray-600 text-white">Modulo:</p>
+                    <p className="font-serif w-60 h- left bg-gray-600 text-white">Modulo:</p>
 
                 </div>
             </div>
