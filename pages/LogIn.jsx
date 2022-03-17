@@ -1,7 +1,7 @@
 const LogIn = () => {
     return (
-        <div id="contenedorPrincipal" className="h-screen w-screen flex">
-            <div id="contenedorIzquierdo" className="w-2/3 h-screen bg-gray-800">
+        <div id="contenedorPrincipal" className="h-screen w-screen flex flex-col">
+            <div id="contenedorIzquierdo" className="w-2/3 bg-gray-800">
                 <div className="font-serif text-center text-4xl pt-10 text-white">  ¡Bienvenido! </div>
                 <span id="iconoLogIn" className="material-icons-outlined text-white pt-5 flex justify-center text-9xl">
                     account_circle
