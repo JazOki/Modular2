@@ -10,12 +10,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id   String @id @default(uuid())
-  name String @db.VarChar(255)
-
-}
-
 model Admin {
   id          String  @id @default(uuid())
   usuario     String  @db.VarChar(50)
@@ -29,7 +23,6 @@ model Admin {
 }
 
 model Alumno {
-  //id          String  @id @default(uuid())
   codigo      String  @id @db.VarChar(9)
   matricula   String  @db.VarChar(6)
   nombre      String  @db.VarChar(100)
