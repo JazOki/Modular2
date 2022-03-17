@@ -111,7 +111,7 @@ const LogIn = () => {
         <div className="pt-7 pl-48">
           <Link href="/dashboard">
             <a>
-              <button className="font-serif rounded w-36 h-14 transition duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+              <button className="font-serif rounded w-36 h-14 transition //duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
                 Ingresar
               </button>
             </a>
