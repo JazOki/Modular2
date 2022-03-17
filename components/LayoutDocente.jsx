@@ -1,12 +1,12 @@
-import SidebarButton from "./SidebarButton";
+import SidebarButtonD from "./SidebarButtonD";
 import Link from "next/link";
 
-const Layout = ({ children, nombre, matricula, codigo }) => {
+const LayoutD = ({ children, nombre, codigo }) => {
   return (
     <div className="flex flex-col w-screen h-screen">
-      <header className="px-5 bg-blue-900 text-right h-12 flex items-center justify-between">
-        <p className="ml-5 text-white font-serif flex text-center items-start px-14">
-          Alumno
+      <header className="px-5 bg-purple-800 text-right h-12 flex items-center justify-between">
+        <p className="ml-5 text-white font-serif flex text-center items-center px-14">
+          Docente
         </p>
         <p className="flex">
           <span className="text-white mr-2 material-icons">
@@ -26,27 +26,21 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
               account_circle
             </span>
             <p className="text-white font-serif flex items-center">
-              Matrícula: {matricula}
-            </p>
-            <p className="text-white font-serif flex items-center">
               Código: {codigo}
             </p>
           </div>
           <div>
-            <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
+            <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">
               Documentación
             </p>
-            <SidebarButton nombre="Registrar" icono="description" />
-            <SidebarButton nombre="Modificaciones" icono="note_alt" />
-            <SidebarButton nombre="Consulta" icono="source" />
-            <SidebarButton nombre="Observaciones" icono="find_in_page" />
+            <SidebarButtonD nombre="Consulta" icono="find_in_page" />
           </div>
           <div>
-            <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
+            <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">
               Configuraciones
             </p>
-            <SidebarButton nombre="Perfil" icono="person" />
-            <SidebarButton nombre="Salir" icono="exit_to_app" />
+            <SidebarButtonD nombre="Perfil" icono="person" />
+            <SidebarButtonD nombre="Salir" icono="exit_to_app" />
           </div>
         </aside>
         <div className="flex-grow ">{children}</div>
@@ -55,4 +49,4 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
   );
 };
 
-export default Layout;
+export default LayoutD;

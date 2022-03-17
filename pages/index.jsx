@@ -1,4 +1,4 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const LogIn = () => {
   return (
@@ -25,6 +25,7 @@ const LogIn = () => {
             @universidad-une.com{" "}
           </p>
         </div>
+
         <p className="font-serif text-left text-xl pl-24 pt-5 text-white top-56">
           {" "}
           Contraseña:{" "}
@@ -39,7 +40,7 @@ const LogIn = () => {
           {" "}
           Usuario:{" "}
         </p>
-        <div id="usuarioBox" className="pl-24 pt-2">
+        <div id="usuarioBox" className="pl-24 pt-2 font-serif">
           <select name="select" className="rounded bg-white w-80">
             <option value="nothing"> Selecciona una opción... </option>
             <option value="alumno"> Alumno </option>
@@ -50,9 +51,11 @@ const LogIn = () => {
 
         <div className="pt-7 pl-48">
           <Link href="/dashboard">
-          <a className="font-serif rounded w-36 h-14 transition duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-            Ingresar
-          </a>
+            <a>
+              <button className="font-serif rounded w-36 h-14 transition duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+                Ingresar
+              </button>
+            </a>
           </Link>
         </div>
       </div>
