@@ -5,10 +5,11 @@ const consultarEtapas = () => {
             </div>
             <div className="w-full flex flex-col bg-gray-800">
                 <div className="h-16 bg-gray-100 text-right "></div>
-                <div className="font-serif w-2/6 h-80 text-left text-xl pl-14 pt-7 bg-gray-600 text-white">Escribre el nombre del proyecto:
-                    <div><button className="font-serif rounded w-32 h-12 transition bg-gray-600 hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-                        Regresar
-                    </button></div>
+                <div className="font-serif w-3/5 h-96  pl-14 pt-7 bg-gray-600">
+                    <p className="font-serif w-50 h-50 bg-gray-600 text-white">Estado:
+                        <input type="text" className="telf pl-16 pt-4 w-40 h-9"></input></p>
+                    <p className="font-serif w-60 h- left bg-gray-600 text-white">Modulo:</p>
+
                 </div>
             </div>
         </div>
