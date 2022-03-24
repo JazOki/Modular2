@@ -6,67 +6,72 @@ const LogIn = () => {
       <div className="flex flex-grow">
         <aside className="justify-evenly bg-gray-800">
           <div className="flex flex-col items-center">
-            <p className="font-serif mr-32 text-center text-4xl pt-10 text-white">
-              {" "}
-              ¡Bienvenido!{" "}
-            </p>
-            <span className="text-white mr-32 flex justify-center material-icons text-9xl">
-              account_circle
-            </span>
-            <p className="font-serif mr-60 text-right text-xl pl-0 pt-5 text-white">
-              {" "}
-              Correo institucional:{"   "}
-            </p>
-            <a className="pt-2">
-              <input type="text" className="w-48 mr-60 rounded-3xl"></input>
-              <p className="pt-2 font-sans text-white absolute px-48 top-64">
-                {" "}
-                @universidad-une.com{" "}
-              </p>
-            </a>
-            <p className="font-serif mr-80 text-right text-xl pl-0 pt-5 text-white">
-              {""}
-              Contraseña:{""}
-            </p>
-            <p className="mr-20">
-              <input type="password" className="w-80 rounded-3xl"></input>{" "}
-              <span className="material-icons-outlined text-white text-3xl">
-                visibility
+            <div className="flex mr-3 text-4xl pt-10 text-center text-white flex-col font-serif">
+              <p> ¡Bienvenido! </p>
+              <span className="justify-center material-icons text-9xl">
+                account_circle
               </span>
-            </p>
-            <p className="font-serif mr-80 text-xl pt-5 text-white">
-              {" "}
-              Usuario:{"   "}
-            </p>
-            <p id="usuarioBox" className="pl-24 mr-52 pt-2 font-serif">
-              <select name="select" className="rounded-3xl bg-white w-80">
-                <option value="nothing"> Selecciona una opción... </option>
-                <option value="alumno"> Alumno </option>
-                <option value="docente"> Docente </option>
-                <option value="Admin"> Admin </option>
-              </select>
-            </p>
-            <p className="pt-7 pl-48">
-              <Link href="/dashboard">
-                <a>
-                  <button className="font-serif rounded w-36 mr-60 h-14 transition //duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-                    Ingresar
-                  </button>
-                </a>
-              </Link>
-            </p>
+            </div>
+            <div className="">
+              <p className="font-serif text-xl pt-5 text-white">
+                {""}
+                Correo institucional:{""}
+              </p>
+              <p className="pt-5">
+                <input type="text" className="w-48 rounded-3xl"></input>{" "}
+                <span className="font-serif text-white absolute">
+                  {" "}
+                  @universidad-une.com{" "}
+                </span>
+              </p>
+              <p className="font-serif text-xl pt-5 text-white">
+                {""}
+                Contraseña:{""}
+              </p>
+              <p>
+                <input type="password" className="w-80 rounded-3xl"></input>{" "}
+                <span className="material-icons-outlined text-white text-3xl">
+                  visibility
+                </span>
+              </p>
+              <p className="font-serif text-xl pt-5 text-white">
+                {" "}
+                Usuario:{"   "}
+              </p>
+              <span id="usuarioBox" className="font-serif">
+                <select name="select" className="rounded-3xl bg-white w-80">
+                  <option value="nothing"> Selecciona una opción... </option>
+                  <option value="alumno"> Alumno </option>
+                  <option value="docente"> Docente </option>
+                  <option value="Admin"> Admin </option>
+                </select>
+              </span>
+            </div>
+            <div id="Boton">
+              <p className="pt-7 pl-48">
+                <Link href="/dashboard">
+                  <a>
+                    <button className="font-serif rounded w-36 mr-60 h-14 transition //duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+                      Ingresar
+                    </button>
+                  </a>
+                </Link>
+              </p>
+            </div>
           </div>
         </aside>
         <header>
-          <p id="contenedorDerecho" className="w-full flex flex-col">
-            <div className="text-center pt-56">
-              <span className="material-icons-outlined text-9xl">book</span>
-              <p className="font-serif text-xl">
-                {" "}
-                Gestor de proyectos <br /> modulares{" "}
-              </p>
-            </div>
-          </p>
+          <div>
+            <p id="contenedorDerecho" className="w-full flex flex-col">
+              <div className="text-center pt-52">
+                <span className="material-icons-outlined text-9xl">book</span>
+                <p className="font-serif text-xl">
+                  {" "}
+                  Gestor de proyectos <br /> modulares{" "}
+                </p>
+              </div>
+            </p>
+          </div>
         </header>
       </div>
     </div>
