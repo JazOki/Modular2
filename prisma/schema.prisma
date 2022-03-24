@@ -23,30 +23,41 @@ model Admin {
 }
 
 model Alumno {
-  codigo      String  @id @db.VarChar(9)
-  matricula   String  @db.VarChar(6)
-  nombre      String  @db.VarChar(100)
-  apellidoPat String  @db.VarChar(100)
-  apellidoMat String  @db.VarChar(100)
-  correo      String  @db.VarChar(100)
-  isEnable    Boolean @default(true)
-  foto        String  @db.Text
-  contrasena  String  @db.VarChar(255)
+  codigo       String     @id @db.VarChar(9)
+  matricula    String     @db.VarChar(6)
+  nombre       String     @db.VarChar(100)
+  apellidoPat  String     @db.VarChar(100)
+  apellidoMat  String     @db.VarChar(100)
+  correo       String     @db.VarChar(100)
+  isEnable     Boolean    @default(true)
+  foto         String     @db.Text
+  contrasena   String     @db.VarChar(255)
+  proyecto1    ProyectoE1 @relation(fields: [proyectoE1Id], references: [id])
+  proyectoE1Id String
 
   docente       Docente @relation(fields: [docenteCodigo], references: [codigo])
   docenteCodigo String  @db.VarChar(9)
+
+  ProyectoE2   ProyectoE2? @relation(fields: [proyectoE2Id], references: [id])
+  proyectoE2Id String?
+
+  ProyectoE3   ProyectoE3? @relation(fields: [proyectoE3Id], references: [id])
+  proyectoE3Id String?
 }
 
 model Docente {
-  codigo      String   @id @db.VarChar(9)
-  nombre      String   @db.VarChar(100)
-  apellidoPat String   @db.VarChar(100)
-  apellidoMat String   @db.VarChar(100)
-  correo      String   @db.VarChar(100)
-  isEnable    Boolean  @default(true)
-  foto        String   @db.Text
-  contrasena  String   @db.VarChar(255)
+  codigo      String       @id @db.VarChar(9)
+  nombre      String       @db.VarChar(100)
+  apellidoPat String       @db.VarChar(100)
+  apellidoMat String       @db.VarChar(100)
+  correo      String       @db.VarChar(100)
+  isEnable    Boolean      @default(true)
+  foto        String       @db.Text
+  contrasena  String       @db.VarChar(255)
   alumnos     Alumno[]
+  ProyectosE1  ProyectoE1[]
+  ProyectosE2  ProyectoE2[]
+  ProyectosE3  ProyectoE3[]
 }
 
 model ProyectoE1 {
@@ -55,7 +66,9 @@ model ProyectoE1 {
   estado        Estado   @default(Entregado)
   observacion   String   @db.VarChar(300)
   fechaRegistro DateTime @db.Date
-
+  alumnos       Alumno[]
+  docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
+  docenteCodigo String   @db.VarChar(9)
 }
 
 model ProyectoE2 {
@@ -65,6 +78,9 @@ model ProyectoE2 {
   evaluacion    Evaluacion @default(Sin_evaluar)
   observacion   String     @db.VarChar(300)
   fechaRegistro DateTime   @db.Date
+  alumnos       Alumno[]
+  docente       Docente    @relation(fields: [docenteCodigo], references: [codigo])
+  docenteCodigo String     @db.VarChar(9)
 }
 
 model ProyectoE3 {
@@ -73,6 +89,9 @@ model ProyectoE3 {
   estado        Estado   @default(Entregado)
   observacion   String   @db.VarChar(300)
   fechaRegistro DateTime @db.Date
+  alumnos       Alumno[]
+  docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
+  docenteCodigo String   @db.VarChar(9)
 }
 
 enum Estado {
