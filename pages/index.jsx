@@ -1,4 +1,29 @@
 import Link from "next/link";
+import { useState } from "react"
+
+const LogIn = () => {
+  const [usuario, setUsuario] = useState('')
+  const [contrasenia, setContrasenia] = useState('')
+
+  const onSubmitLoginForm = (eventForm) => { // Funcion para la accion del boton
+      eventForm.preventDefault() // evitar que refresh en la pagina al darle click al boton
+      
+      const payload = {
+          correo: usuario+'@universidad-une.com',
+          contrasena: contrasenia
+      }
+
+      fetch('/api/login', { 
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+      })
+          .then((response) => response.json())
+          .catch((error) => console.log(error))
+          .then((json) => console.log(json))
+  }
 
 const LogIn = () => {
   return (
@@ -18,7 +43,7 @@ const LogIn = () => {
                 Correo institucional:{""}
               </p>
               <p className="pt-5">
-                <input type="text" className="w-48 rounded-3xl"></input>{" "}
+                <input type="text" className="w-48 rounded-3xl" value={usuario} onChange={(eventInput) => setUsuario(eventInput.target.value)}></input>{" "}
                 <span className="font-serif text-white absolute">
                   {" "}
                   @universidad-une.com{" "}
@@ -29,7 +54,7 @@ const LogIn = () => {
                 Contraseña:{""}
               </p>
               <p>
-                <input type="password" className="w-80 rounded-3xl"></input>{" "}
+                <input type="password" className="w-80 rounded-3xl" value={contrasenia} onChange={(eventInput) => setContrasenia(eventInput.target.value)}></input>{" "}
                 <span className="material-icons-outlined text-white text-3xl">
                   visibility
                 </span>
