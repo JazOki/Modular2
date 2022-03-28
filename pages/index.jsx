@@ -26,6 +26,7 @@ const LogIn = () => {
   }
 
   return (
+
     <div className="flex flex-col w-screen h-screen">
       <div className="flex flex-grow">
         <aside className="justify-evenly bg-gray-800">
@@ -36,11 +37,15 @@ const LogIn = () => {
                 account_circle
               </span>
             </div>
-            <form onSubmit={onSubmitLoginForm}>
+
+
+            <form onSubmit={onSubmitLoginForm} className="pt-7 pl-12 pr-7">
+
               <p className="font-serif text-xl pt-5 text-white">
                 {""}
                 Correo institucional:{""}
               </p>
+
               <p className="pt-5">
                 <input type="text" className="w-48 rounded-3xl" value={usuario} onChange={(eventInput) => setUsuario(eventInput.target.value)}></input>{" "}
                 <span className="font-serif text-white absolute">
@@ -48,20 +53,24 @@ const LogIn = () => {
                   @universidad-une.com{" "}
                 </span>
               </p>
+
               <p className="font-serif text-xl pt-5 text-white">
                 {""}
                 Contraseña:{""}
               </p>
+
               <p>
                 <input type="password" className="w-80 rounded-3xl" value={contrasenia} onChange={(eventInput) => setContrasenia(eventInput.target.value)}></input>{" "}
                 <span className="material-icons-outlined text-white text-3xl">
                   visibility
                 </span>
               </p>
+
               <p className="font-serif text-xl pt-5 text-white">
                 {" "}
                 Usuario:{"   "}
               </p>
+
               <span id="usuarioBox" className="font-serif">
                 <select name="select" className="rounded-3xl bg-white w-80">
                   <option value="nothing"> Selecciona una opción... </option>
@@ -70,18 +79,14 @@ const LogIn = () => {
                   <option value="Admin"> Admin </option>
                 </select>
               </span>
+
+              <div className="pt-7 pl-24">
+                        <button className="font-serif rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+                            Ingresar
+                        </button>
+                    </div>
             </form>
-            <div id="Boton">
-              <p className="pt-7 pl-48">
-                <Link href="/dashboard">
-                  <a>
-                    <button className="font-serif rounded w-36 mr-60 h-14 transition //duration-150 bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-                      Ingresar
-                    </button>
-                  </a>
-                </Link>
-              </p>
-            </div>
+
           </div>
         </aside>
         <header>
