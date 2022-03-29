@@ -1,6 +1,6 @@
 const registroEtapa1 = () => {
   return (
-    <div className="h-screen w-screen flex">
+    /*<div className="h-screen w-screen flex">
       <div className="w-36 h-screen bg-gray-100">
       </div>
       <div className="w-full flex flex-col bg-gray-800">
@@ -47,7 +47,7 @@ const registroEtapa1 = () => {
           </button></div>
         </div>
       </div>
-    </div>
+    </div>*/
 
   );
 };
