@@ -46,7 +46,7 @@ model Alumno {
 }
 
 model Docente {
-  codigo      String       @id @db.VarChar(9)
+  codigo      String       @id @default(uuid())
   nombre      String       @db.VarChar(100)
   apellidoPat String       @db.VarChar(100)
   apellidoMat String       @db.VarChar(100)
