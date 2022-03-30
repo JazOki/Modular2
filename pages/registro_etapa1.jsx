@@ -1,8 +1,8 @@
-const registroEtapa1 = () => {
-  return (
-    /*<div className="h-screen w-screen flex">
-      <div className="w-36 h-screen bg-gray-100">
-      </div>
+
+
+const registro_etapa1 = () => {
+return(    
+    <div className="">
       <div className="w-full flex flex-col bg-gray-800">
         <div className="h-16 bg-gray-100 text-right "></div>
         <div className="font-serif w-1/3 h-screen text-left text-xl pl-14 pt-7 bg-gray-600 text-white">Escribre el nombre del proyecto:
@@ -47,10 +47,7 @@ const registroEtapa1 = () => {
           </button></div>
         </div>
       </div>
-    </div>*/
-
-  );
+    </div>
+);
 };
-
-
-export default registroEtapa1
+export default registro_etapa1;

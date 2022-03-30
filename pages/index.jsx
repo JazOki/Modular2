@@ -1,32 +1,32 @@
 import Link from "next/link";
-import { useState } from "react"
+import { useState } from "react";
 
 const LogIn = () => {
-  const [usuario, setUsuario] = useState('')
-  const [contrasenia, setContrasenia] = useState('')
+  const [usuario, setUsuario] = useState("");
+  const [contrasenia, setContrasenia] = useState("");
 
-  const onSubmitLoginForm = (eventForm) => { // Funcion para la accion del boton
-    eventForm.preventDefault() // evitar que refresh en la pagina al darle click al boton
+  const onSubmitLoginForm = (eventForm) => {
+    // Funcion para la accion del boton
+    eventForm.preventDefault(); // evitar que refresh en la pagina al darle click al boton y no se pierden la coockies ni el inicio de sesión
 
     const payload = {
-      correo: usuario + '@universidad-une.com',
-      contrasena: contrasenia
-    }
+      correo: usuario + "@universidad-une.com",
+      contrasena: contrasenia,
+    };
 
-    fetch('/api/login', {
-      method: 'POST',
+    fetch("/api/login", {
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload)
+      body: JSON.stringify(payload),
     })
       .then((response) => response.json())
       .catch((error) => console.log(error))
-      .then((json) => console.log(json))
-  }
+      .then((json) => console.log(json));
+  };
 
   return (
-
     <div className="flex flex-col w-screen h-screen">
       <div className="flex flex-grow">
         <aside className="justify-evenly bg-gray-800">
@@ -38,16 +38,19 @@ const LogIn = () => {
               </span>
             </div>
 
-
             <form onSubmit={onSubmitLoginForm} className="pt-7 pl-12 pr-7">
-
               <p className="font-serif text-xl pt-5 text-white">
                 {""}
                 Correo institucional:{""}
               </p>
 
               <p className="pt-5">
-                <input type="text" className="w-48 rounded-3xl" value={usuario} onChange={(eventInput) => setUsuario(eventInput.target.value)}></input>{" "}
+                <input
+                  type="text"
+                  className="w-48 rounded-3xl"
+                  value={usuario}
+                  onChange={(eventInput) => setUsuario(eventInput.target.value)}
+                ></input>{" "}
                 <span className="font-serif text-white absolute">
                   {" "}
                   @universidad-une.com{" "}
@@ -60,33 +63,25 @@ const LogIn = () => {
               </p>
 
               <p>
-                <input type="password" className="w-80 rounded-3xl" value={contrasenia} onChange={(eventInput) => setContrasenia(eventInput.target.value)}></input>{" "}
+                <input
+                  type="password"
+                  className="w-80 rounded-3xl"
+                  value={contrasenia}
+                  onChange={(eventInput) =>
+                    setContrasenia(eventInput.target.value)
+                  }
+                ></input>{" "}
                 <span className="material-icons-outlined text-white text-3xl">
                   visibility
                 </span>
               </p>
 
-              <p className="font-serif text-xl pt-5 text-white">
-                {" "}
-                Usuario:{"   "}
-              </p>
-
-              <span id="usuarioBox" className="font-serif">
-                <select name="select" className="rounded-3xl bg-white w-80">
-                  <option value="nothing"> Selecciona una opción... </option>
-                  <option value="alumno"> Alumno </option>
-                  <option value="docente"> Docente </option>
-                  <option value="Admin"> Admin </option>
-                </select>
-              </span>
-
               <div className="pt-7 pl-24">
-                        <button className="font-serif rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-                            Ingresar
-                        </button>
-                    </div>
+                <button className="font-serif rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+                  Ingresar
+                </button>
+              </div>
             </form>
-
           </div>
         </aside>
         <header>
@@ -94,7 +89,7 @@ const LogIn = () => {
             <p id="contenedorDerecho" className="w-full flex flex-col">
               <div className="text-center pt-52">
                 <span className="material-icons-outlined text-9xl">book</span>
-                <p className="font-serif text-xl">
+                <p className="font-serif text-xl text-center">
                   {" "}
                   Gestor de proyectos <br /> modulares{" "}
                 </p>
