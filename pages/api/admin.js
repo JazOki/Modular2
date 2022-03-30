@@ -1,6 +1,7 @@
+import { privateRoute } from "../../lib/ironSessionConfig";
 import {get,post,put} from "./../../backend/controladores/adminController"
 
-export default function admin(req, res) {
+function admin(req, res) {
     switch (req.method) {
         case 'GET':
             get(req, res)
@@ -18,3 +19,5 @@ export default function admin(req, res) {
             break;
     }
 }
+
+export default privateRoute(admin) // funcion para asignar ruta privada enviando un handler, en este caso alumno

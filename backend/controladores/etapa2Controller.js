@@ -9,11 +9,19 @@ export const get = async (req, res) => {
 // Insercion:
 export const post = async (req, res) => {
     const {
-        fechaRegistro, observacion, urldocumento, estado, evaluacion, id
+        fechaRegistro, observacion, urldocumento, estado, evaluacion, id, docenteCodigo
     } = req.body
     const proyecto = await prisma.proyectoE2.create({
         data: {
-            fechaRegistro, observacion, urldocumento, estado, evaluacion, id
+            fechaRegistro, observacion, urldocumento, estado, evaluacion, id,
+            docente: {
+                connect: {
+                    codigo: docenteCodigo
+                }
+            }
+        },
+        include:{
+            alumnos: true
         }
     })
     res.json(proyecto)

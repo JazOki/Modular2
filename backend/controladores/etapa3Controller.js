@@ -9,11 +9,19 @@ export const get = async (req, res) => {
 // Insercion:
 export const post = async (req, res) => {
     const {
-        fechaRegistro, observacion, urldocumento, estado, id
+        fechaRegistro, observacion, urldocumento, estado, id, docenteCodigo
     } = req.body
     const proyecto = await prisma.proyectoE3.create({
         data: {
-            fechaRegistro, observacion, urldocumento, estado, id
+            fechaRegistro, observacion, urldocumento, estado, id,
+            docente: {
+                connect: {
+                    codigo: docenteCodigo
+                }
+            }
+        }, 
+        include:{
+            alumnos: true
         }
     })
     res.json(proyecto)

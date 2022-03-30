@@ -15,9 +15,9 @@ export const post = async (req, res) => {
         data: {
             apellidoMat, apellidoPat, codigo, contrasena, correo, foto, nombre
         },
-        /*include:{
+        include:{
             alumnos: true
-        }*/
+        }
     })
     res.json(user)
 }

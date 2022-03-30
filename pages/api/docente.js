@@ -1,6 +1,7 @@
+import { privateRoute } from "../../lib/ironSessionConfig";
 import {get,post,put} from "./../../backend/controladores/docenteController"
 
-export default function docente(req, res) {
+function docente(req, res) {
     switch (req.method) {
         case 'GET':
             get(req, res)
@@ -18,3 +19,5 @@ export default function docente(req, res) {
             break;
     }
 }
+
+export default privateRoute(docente) // funcion para asignar ruta privada enviando un handler

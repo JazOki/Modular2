@@ -32,7 +32,7 @@ model Alumno {
   isEnable     Boolean     @default(true)
   foto         String      @db.Text
   contrasena   String      @db.VarChar(255)
-  proyecto1    ProyectoE1? @relation(fields: [proyectoE1Id], references: [id]) // "?" para decir que el campo es opcional
+  proyectoE1    ProyectoE1? @relation(fields: [proyectoE1Id], references: [id]) // "?" para decir que el campo es opcional
   proyectoE1Id String?
 
   docente       Docente? @relation(fields: [docenteCodigo], references: [codigo])
@@ -46,7 +46,7 @@ model Alumno {
 }
 
 model Docente {
-  codigo      String       @id @db.VarChar(9)
+  codigo      String       @id @default(uuid())
   nombre      String       @db.VarChar(100)
   apellidoPat String       @db.VarChar(100)
   apellidoMat String       @db.VarChar(100)
