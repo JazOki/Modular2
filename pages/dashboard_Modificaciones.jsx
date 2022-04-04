@@ -4,28 +4,23 @@ const Menu = () => {
   return (
     <Layout nombre="Jazmin" matricula="A03440" codigo="Y1923553">
       <div className=" flex flex-col h-full font-serif text-left text-xl bg-gray-600">
-        <form className="ml-10">
+        <form className="ml-40 pt-16">
           <p className="font-serif text-xl pt-20 text-white">
             Escribe el nombre del proyecto:
             <input
               type="text"
-              className="ml-2 w-80 text-black rounded-3xl"
+              className="ml-2 w-80 text-black rounded-full"
             ></input>
           </p>
           <p className="font-serif  text-left text-xl pl-0 pt-5  text-white">
             Elige el archivo PDF que deseas subir:
             <input
-              type="text"
-              className="ml-2 w-62 text-black rounded-3xl"
+              type="file"
+              className="ml-2 w-62 text-black rounded-full"
             ></input>{" "}
-            <button className="ml-2 font-serif rounded transition bg-gray-600 hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-              <span className=" text-white material-icons">unarchive</span>
-            </button>
+            
           </p>
           <p className="pt-7 ml-80">
-            <button className="font-serif rounded  w-32 h-12 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-              Regresar
-            </button>
             <button className="font-serif rounded left ml-10 w-32 h-12  transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
               Modificar
             </button>
