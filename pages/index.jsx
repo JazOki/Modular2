@@ -103,28 +103,28 @@ const LogIn = () => {
   );
 };
 // rutas protegidas
-export const getServerSideProps = privateRoute((context) => {
-  const user = context.req.session.user; //si hay un usuario
-  if (user) {
-    switch (context.req.session.role) {
-      case "alumno":
-        return {
-          redirect: {
-            destination: "/dashboard",
-            permanent: false,
-          },
-        };
-      default:
-        return {
-          redirect: {
-            destination: "/api/logout",
-            permanent: false,
-          },
-        };
-    }
-  }
-  return {
-    props: {},
-  };
-});
+// export const getServerSideProps = privateRoute((context) => {
+//   const user = context.req.session.user; //si hay un usuario
+//   if (user) {
+//     switch (context.req.session.role) {
+//       case "alumno":
+//         return {
+//           redirect: {
+//             destination: "/dashboard",
+//             permanent: false,
+//           },
+//         };
+//       default:
+//         return {
+//           redirect: {
+//             destination: "/api/logout",
+//             permanent: false,
+//           },
+//         };
+//     }
+//   }
+//   return {
+//     props: {},
+//   };
+// });
 export default LogIn;
