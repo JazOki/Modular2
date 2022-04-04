@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { privateRoute } from "../lib/ironSessionConfig";
 
 const LogIn = () => {
   const [usuario, setUsuario] = useState("");
@@ -101,5 +102,29 @@ const LogIn = () => {
     </div>
   );
 };
-
+// rutas protegidas
+export const getServerSideProps = privateRoute((context) => {
+  const user = context.req.session.user; //si hay un usuario
+  if (user) {
+    switch (context.req.session.role) {
+      case "alumno":
+        return {
+          redirect: {
+            destination: "/dashboard",
+            permanent: false,
+          },
+        };
+      default:
+        return {
+          redirect: {
+            destination: "/api/logout",
+            permanent: false,
+          },
+        };
+    }
+  }
+  return {
+    props: {},
+  };
+});
 export default LogIn;
