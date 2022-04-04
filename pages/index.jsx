@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
-import { privateRoute } from "../lib/ironSessionConfig";
+import { privatePage } from "../lib/ironSessionConfig";
 
 const LogIn = () => {
   const [usuario, setUsuario] = useState("");
@@ -103,7 +103,7 @@ const LogIn = () => {
   );
 };
 // rutas protegidas
-export const getServerSideProps = privateRoute((context) => {
+export const getServerSideProps = privatePage((context) => {
   const user = context.req.session.user; //si hay un usuario
   if (user) {
     switch (context.req.session.role) {
