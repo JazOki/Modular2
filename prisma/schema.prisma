@@ -3,11 +3,13 @@
 
 generator client {
   provider = "prisma-client-js"
+  previewFeatures = ["referentialIntegrity"]
 }
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url = env("DATABASE_URL")
+  referentialIntegrity = "prisma"
 }
 
 model Admin {
@@ -18,7 +20,7 @@ model Admin {
   apellidoMat String  @db.VarChar(100)
   correo      String  @db.VarChar(100)
   isEnable    Boolean @default(true)
-  foto        String  @db.Text
+  foto        String?  @db.Text
   contrasena  String  @db.VarChar(255)
 }
 
@@ -30,7 +32,7 @@ model Alumno {
   apellidoMat  String      @db.VarChar(100)
   correo       String      @db.VarChar(100) @unique
   isEnable     Boolean     @default(true)
-  foto         String      @db.Text
+  foto         String?      @db.Text
   contrasena   String      @db.VarChar(255)
   proyectoE1    ProyectoE1? @relation(fields: [proyectoE1Id], references: [id]) // "?" para decir que el campo es opcional
   proyectoE1Id String?
@@ -52,7 +54,7 @@ model Docente {
   apellidoMat String       @db.VarChar(100)
   correo      String       @db.VarChar(100)
   isEnable    Boolean      @default(true)
-  foto        String       @db.Text
+  foto        String?       @db.Text
   contrasena  String       @db.VarChar(255)
   alumnos     Alumno[]
   ProyectosE1 ProyectoE1[]
@@ -64,7 +66,7 @@ model ProyectoE1 {
   id            String   @id @default(uuid())
   urldocumento  String   @db.Text
   estado        Estado   @default(Entregado)
-  observacion   String   @db.VarChar(300)
+  observacion   String?   @db.VarChar(300)
   fechaRegistro DateTime @db.Date
   alumnos       Alumno[]
   docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
@@ -76,7 +78,7 @@ model ProyectoE2 {
   urldocumento  String     @db.Text
   estado        Estado     @default(Entregado)
   evaluacion    Evaluacion @default(Sin_evaluar)
-  observacion   String     @db.VarChar(300)
+  observacion   String?     @db.VarChar(300)
   fechaRegistro DateTime   @db.Date
   alumnos       Alumno[]
   docente       Docente    @relation(fields: [docenteCodigo], references: [codigo])
@@ -87,7 +89,7 @@ model ProyectoE3 {
   id            String   @id @default(uuid())
   urldocumento  String   @db.Text
   estado        Estado   @default(Entregado)
-  observacion   String   @db.VarChar(300)
+  observacion   String?   @db.VarChar(300)
   fechaRegistro DateTime @db.Date
   alumnos       Alumno[]
   docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
