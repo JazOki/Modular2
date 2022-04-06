@@ -52,8 +52,8 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
                 Documentación
               </p>
-              <SidebarButton nombre="Registrar" icono="description" />
-              <SidebarButton nombre="Modificaciones" icono="note_alt" />
+              <SidebarButton href="/dashboard_registro" nombre="Registrar" icono="description"/>
+              <SidebarButton href="/dashboard_modificaciones" nombre="Modificaciones" icono="note_alt" />
               <SidebarButton nombre="Consulta" icono="source" />
               <SidebarButton nombre="Observaciones" icono="find_in_page" />
             </div>
