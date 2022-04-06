@@ -29,7 +29,22 @@ export const put = async (req, res) => {
     } = req.body
     const user = await prisma.docente.update({
         data: {
-            apellidoMat, apellidoPat, contrasena, correo, foto, nombre
+            apellidoMat, apellidoPat, contrasena, correo, foto, nombre,
+           /*proyectoE1:{
+                connect: {
+                    id: proyectoE1Id
+                }
+            },
+            ProyectoE2:{
+                connect:{
+                    id: proyectoE2Id
+                }
+            },
+            ProyectoE3:{
+                connect:{
+                    id: proyectoE3Id
+                }
+            }*/
         },
         where: {
             codigo

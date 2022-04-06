@@ -55,6 +55,12 @@ async function login(req, res) { // funcion asincrona con parametros
 
     // crear una sesion de usuario si lo encuentra:
     req.session.user = alumno ?? docente; // "??" para decirle que si no es alumno agarre docente como sesion
+    if(alumno)
+        req.session.role = 'alumno'
+    else if(docente)
+        req.session.role = 'docente'
+    /*else if(admin)
+        req.session.role = 'admin'*/
     await req.session.save(); // Guarda la sesion
     res.json({ ok: "ok" });
 }
