@@ -1,5 +1,6 @@
 import SidebarButtonA from "./SidebarButtonA";
 import Link from "next/link";
+import { privatePage } from "../lib/ironSessionConfig";
 
 const LayoutAdmin = ({ children, nombre, user, estado, codigo }) => {
   return (
@@ -55,5 +56,22 @@ const LayoutAdmin = ({ children, nombre, user, estado, codigo }) => {
     </div>
   );
 };
+
+// rutas protegidas
+export const getServerSideProps = privatePage((context) => {
+  const user = context.req.session.user; //si hay un usuario
+  if (!user) {
+        return {
+          redirect: {
+            destination: "/api/logout",
+            permanent: false,
+          },
+        };
+    
+  }
+  return {
+    props: {},
+  };
+});
 
 export default LayoutAdmin;

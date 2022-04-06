@@ -1,5 +1,6 @@
 import SidebarButtonD from "./SidebarButtonD";
 import Link from "next/link";
+import { privatePage } from "../lib/ironSessionConfig";
 
 const LayoutD = ({ children, nombre, codigo }) => {
   return (
@@ -48,5 +49,22 @@ const LayoutD = ({ children, nombre, codigo }) => {
     </div>
   );
 };
+
+// rutas protegidas
+export const getServerSideProps = privatePage((context) => {
+  const user = context.req.session.user; //si hay un usuario
+  if (!user) {
+        return {
+          redirect: {
+            destination: "/api/logout",
+            permanent: false,
+          },
+        };
+    
+  }
+  return {
+    props: {},
+  };
+});
 
 export default LayoutD;
