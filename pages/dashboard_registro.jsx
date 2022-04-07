@@ -1,6 +1,25 @@
 import Layout from "../components/Layout";
 
 const Menu = () => {
+  const submitRegistro = ()=>{
+    
+    const payload = {
+      fechaRegistro: new Date(),
+      observacion: "", 
+       urldocumento, estado, id, docenteCodigo
+    };
+
+    fetch("/api/etapa1", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error))
+      .then((json) => console.log(json));
+  }
   return (
     <Layout nombre="Jazmin" matricula="A03440" codigo="Y1923553">
       <div className=" flex flex-col h-full font-serif text-left text-xl bg-gray-600">
