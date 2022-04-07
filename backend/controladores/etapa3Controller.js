@@ -9,11 +9,11 @@ export const get = async (req, res) => {
 // Insercion:
 export const post = async (req, res) => {
     const {
-        fechaRegistro, observacion, urldocumento, estado, id, docenteCodigo
+        fechaRegistro, observacion, urldocumento, estado, id, docenteCodigo, nombre
     } = req.body
     const proyecto = await prisma.proyectoE3.create({
         data: {
-            fechaRegistro, observacion, urldocumento, estado, id,
+            fechaRegistro, observacion, urldocumento, estado, id, nombre,
             docente: {
                 connect: {
                     codigo: docenteCodigo
@@ -30,11 +30,11 @@ export const post = async (req, res) => {
 // Actualizar:
 export const put = async (req, res) => {
     const {
-        fechaRegistro, observacion, urldocumento, estado, id
+        fechaRegistro, observacion, urldocumento, estado, id, nombre
     } = req.body
     const proyecto = await prisma.proyectoE3.update({
         data: {
-            fechaRegistro, observacion, urldocumento, estado
+            fechaRegistro, observacion, urldocumento, estado, nombre
         },
         where: {
             id
