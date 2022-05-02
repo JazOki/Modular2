@@ -8,20 +8,20 @@ const Menu = () => {
 };
 
 // 
-// rutas protegidas
-export const getServerSideProps = privatePage((context) => {
-  const user = context.req.session.user; //si no hay un usuario
-  if (!user) {
-        return {
-          redirect: {
-            destination: "/api/logout",
-            permanent: false,
-          },
-        };
-  }
-  return {
-    props: {},
-  };
-});
+// // rutas protegidas
+// export const getServerSideProps = privatePage((context) => {
+//   const user = context.req.session.user; //si no hay un usuario
+//   if (!user) {
+//         return {
+//           redirect: {
+//             destination: "/api/logout",
+//             permanent: false,
+//           },
+//         };
+//   }
+//   return {
+//     props: {},
+//   };
+// });
 
 export default Menu;

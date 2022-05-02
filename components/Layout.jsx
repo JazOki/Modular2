@@ -55,6 +55,7 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
               </p>
               <SidebarButton href="/dashboard_registro" nombre="Registrar" icono="description"/>
               <SidebarButton href="/dashboard_modificaciones" nombre="Modificaciones" icono="note_alt" />
+              <SidebarButton href="/dashboard_consultas" nombre="Consultas" icono="note_alt" />
               <SidebarButton nombre="Consulta" icono="source" />
               <SidebarButton nombre="Observaciones" icono="find_in_page" />
             </div>

@@ -4,7 +4,18 @@ const Menu = () => {
   return (
     <Layout nombre="Jazmin" matricula="A03440" codigo="Y1923553">
       <div className=" flex flex-col h-full font-serif text-left text-xl bg-gray-600">
-        <form className="ml-40 pt-16">
+        <form className="m-auto">
+        <p className="ml-80 font-serif text-xl text-white">
+            Etapas:
+            <select
+              name="select"
+              className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto"
+            >
+              <option value="etapa1">Etapa 1: Planteamiento del problema </option>
+              <option value="etapa2">Etapa 2: Resumen del protyecto </option>
+              <option value="etapa3">Etapa 3: Documentación final </option>
+            </select>
+          </p>
           <p className="font-serif text-xl pt-20 text-white">
             Escribe el nombre del proyecto:
             <input
@@ -20,7 +31,7 @@ const Menu = () => {
             ></input>{" "}
             
           </p>
-          <p className="pt-7 ml-80">
+          <p className="pt-7 ml-96">
             <button className="font-serif rounded left ml-10 w-32 h-12  transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
               Modificar
             </button>
