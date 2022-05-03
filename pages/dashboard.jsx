@@ -1,8 +1,8 @@
 import Layout from "../components/Layout";
 import { privatePage } from "../lib/ironSessionConfig";
 
-const Menu = () => {
-  return < Layout user="Andy02" estado="Activo" codigo="Y19876557">
+const Menu = ({nombre, isEnable, codigo}) => {
+  return < Layout nombre={nombre} estado={isEnable?"activo":"inactivo"} codigo={codigo}>
     
   </Layout>
 };
@@ -20,7 +20,9 @@ export const getServerSideProps = privatePage((context) => {
         };
   }
   return {
-    props: {},
+    props: {
+      ...user
+    },
   };
 });
 
