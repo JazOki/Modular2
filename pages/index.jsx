@@ -1,10 +1,12 @@
 import Link from "next/link";
 import { useState } from "react";
 import { privatePage } from "../lib/ironSessionConfig";
+import { useRouter } from 'next/router'
 
 const LogIn = () => {
   const [usuario, setUsuario] = useState("");
   const [contrasenia, setContrasenia] = useState("");
+  const router = useRouter()
 
   const onSubmitLoginForm = (eventForm) => {
     // Funcion para la accion del boton
@@ -22,9 +24,13 @@ const LogIn = () => {
       },
       body: JSON.stringify(payload),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        response.json()
+        if(response.ok){
+          router.reload() // Recargar la pagina al iniciar sesion
+        }
+      })
       .catch((error) => console.log(error))
-      .then((json) => console.log(json));
   };
 
   return (
