@@ -6,19 +6,23 @@ import { privatePage } from "../lib/ironSessionConfig";
 const Layout = ({ children, nombre, matricula, codigo }) => {
   return (
     <>
-      <Script
-        id="load-watson"
-        dangerouslySetInnerHTML={{
-          __html: `
-          window.watsonAssistantChatOptions = {
+      <Script id="load-watson" dangerouslySetInnerHTML={{
+        __html: `
+        function preSendhandler(event) {
+          event.data.context.skills['main skill'].user_defined.ismember = true;    
+          event.data.context.skills['main skill'].user_defined.username = '${nombre}';    
+        }
+            window.watsonAssistantChatOptions = {
             integrationID: "264e511b-6a10-47e0-a10c-aa9bd1e3b62b", // The ID of this integration.
             region: "us-south", // The region your integration is hosted in.
             serviceInstanceID: "aa8f2b91-1225-419a-b9e5-af1043c982d5", // The ID of your service instance.
-            onLoad: function (instance) { instance.render(); }
-          };
-          `,
-        }}
+            onLoad: function (instance) { 
+              instance.on({ type: "pre:send", handler: preSendhandler });
+              instance.render(); }
+          };`,
+      }}
       />
+      <Script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js" />
       <Script src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js" />
       <div className="flex flex-col w-screen h-screen">
         <header className="px-5 bg-blue-900 text-right h-12 flex items-center justify-between">
@@ -53,7 +57,7 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
                 Documentación
               </p>
-              <SidebarButton href="/dashboard_registro" nombre="Registrar" icono="description"/>
+              <SidebarButton href="/dashboard_registro" nombre="Registrar" icono="description" />
               <SidebarButton href="/dashboard_modificaciones" nombre="Modificaciones" icono="note_alt" />
               <SidebarButton nombre="Consulta" icono="source" />
               <SidebarButton nombre="Observaciones" icono="find_in_page" />
@@ -77,13 +81,13 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
 export const getServerSideProps = privatePage((context) => {
   const user = context.req.session.user; //si hay un usuario
   if (!user) {
-        return {
-          redirect: {
-            destination: "/api/logout",
-            permanent: false,
-          },
-        };
-    
+    return {
+      redirect: {
+        destination: "/api/logout",
+        permanent: false,
+      },
+    };
+
   }
   return {
     props: {},
