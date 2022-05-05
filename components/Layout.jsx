@@ -10,7 +10,7 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
         __html: `
         function preSendhandler(event) {
           event.data.context.skills['main skill'].user_defined.ismember = true;    
-          event.data.context.skills['main skill'].user_defined.username = '${nombre}';    
+          event.data.context.skills['main skill'].user_defined.username = '${nombre}';
         }
             window.watsonAssistantChatOptions = {
             integrationID: "264e511b-6a10-47e0-a10c-aa9bd1e3b62b", // The ID of this integration.
@@ -58,9 +58,8 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
                 Documentación
               </p>
               <SidebarButton href="/dashboard_registro" nombre="Registrar" icono="description" />
-              <SidebarButton href="/dashboard_modificaciones" nombre="Modificaciones" icono="note_alt" />
-              <SidebarButton href="/dashboard_consultas" nombre="Consultas" icono="note_alt" />
-              <SidebarButton nombre="Consulta" icono="source" />
+              <SidebarButton href="/dashboard_Modificaciones" nombre="Modificaciones" icono="note_alt" />
+              <SidebarButton href="/dashboard_consultas" nombre="Consultas" icono="source" />
               <SidebarButton nombre="Observaciones" icono="find_in_page" />
             </div>
             <div>
@@ -68,7 +67,7 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
                 Configuraciones
               </p>
               <SidebarButton nombre="Perfil" icono="person" />
-              <SidebarButton nombre="Salir" icono="exit_to_app" />
+              <SidebarButton href="/api/logout" nombre="Salir" icono="exit_to_app"/>
             </div>
           </aside>
           <div className="flex-grow ">{children}</div>
