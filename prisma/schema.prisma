@@ -71,7 +71,7 @@ model ProyectoE1 {
   fechaRegistro DateTime @db.Date
   alumnos       Alumno[]
   docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
-  docenteCodigo String   @db.VarChar(9)
+  docenteCodigo String   @db.VarChar(300)
 }
 
 model ProyectoE2 {
@@ -84,7 +84,7 @@ model ProyectoE2 {
   fechaRegistro DateTime   @db.Date
   alumnos       Alumno[]
   docente       Docente    @relation(fields: [docenteCodigo], references: [codigo])
-  docenteCodigo String     @db.VarChar(9)
+  docenteCodigo String     @db.VarChar(300)
 }
 
 model ProyectoE3 {
@@ -96,7 +96,7 @@ model ProyectoE3 {
   fechaRegistro DateTime @db.Date
   alumnos       Alumno[]
   docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
-  docenteCodigo String   @db.VarChar(9)
+  docenteCodigo String   @db.VarChar(300)
 }
 
 enum Estado {
