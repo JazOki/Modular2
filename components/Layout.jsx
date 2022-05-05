@@ -1,3 +1,4 @@
+import dashboard from "../pages/dashboard";
 import SidebarButton from "./SidebarButton";
 import Link from "next/link";
 import Script from "next/script";
@@ -11,6 +12,8 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
         function preSendhandler(event) {
           event.data.context.skills['main skill'].user_defined.ismember = true;    
           event.data.context.skills['main skill'].user_defined.username = '${nombre}';
+          event.data.context.skills['main skill'].user_defined.matricula = '${matricula}';
+          event.data.context.skills['main skill'].user_defined.codigo = '${codigo}';
         }
             window.watsonAssistantChatOptions = {
             integrationID: "264e511b-6a10-47e0-a10c-aa9bd1e3b62b", // The ID of this integration.
@@ -46,12 +49,6 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
               <span className="text-white flex justify-center material-icons text-9xl">
                 account_circle
               </span>
-              <p className="text-white font-serif flex items-center">
-                Matrícula: {matricula}
-              </p>
-              <p className="text-white font-serif flex items-center">
-                Código: {codigo}
-              </p>
             </div>
             <div>
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
