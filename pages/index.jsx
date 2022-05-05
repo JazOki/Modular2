@@ -108,6 +108,7 @@ const LogIn = () => {
     </div>
   );
 };
+
 // rutas protegidas
 export const getServerSideProps = privatePage((context) => {
   const user = context.req.session.user; //si hay un usuario
