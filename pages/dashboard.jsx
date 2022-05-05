@@ -1,8 +1,8 @@
 import Layout from "../components/Layout";
 import { privatePage } from "../lib/ironSessionConfig";
 
-const Menu = ({nombre, isEnable, codigo}) => {
-  return < Layout nombre={nombre} estado={isEnable?"activo":"inactivo"} codigo={codigo}>
+const dashboard = ({nombre, isEnable, codigo, matricula}) => {
+  return < Layout nombre={nombre} matricula={matricula} estado={isEnable?"activo":"inactivo"} codigo={codigo} >
     
   </Layout>
 };
@@ -25,4 +25,4 @@ const Menu = ({nombre, isEnable, codigo}) => {
     };
   });
 
-export default Menu;
+export default dashboard;
