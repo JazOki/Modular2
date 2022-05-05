@@ -94,7 +94,7 @@ const LogIn = () => {
         <header>
           <div>
             <p id="contenedorDerecho" className="w-full flex flex-col">
-              <div className="text-center pt-52">
+              <div className=" m-auto text-center pt-52">
                 <span className="material-icons-outlined text-9xl">book</span>
                 <p className="font-serif text-xl text-center">
                   {" "}
