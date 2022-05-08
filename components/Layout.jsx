@@ -22,7 +22,6 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
             onLoad: function (instance) { 
               instance.on({ type: "pre:send", handler: preSendhandler });
               instance.render(); 
-              if()
             }
           };`,
       }}
