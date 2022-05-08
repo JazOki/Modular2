@@ -21,7 +21,9 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
             serviceInstanceID: "aa8f2b91-1225-419a-b9e5-af1043c982d5", // The ID of your service instance.
             onLoad: function (instance) { 
               instance.on({ type: "pre:send", handler: preSendhandler });
-              instance.render(); }
+              instance.render(); 
+              if()
+            }
           };`,
       }}
       />
