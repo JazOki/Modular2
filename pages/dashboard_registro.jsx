@@ -1,7 +1,27 @@
 import Layout from "../components/Layout";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Menu = () => {
+  const [asesores,setAsesores] = useState([])
+
+  useEffect(() => { 
+    fetch("/api/docente")
+    .then((res)=> res.json())
+    .then((json)=> setAsesores(json))
+  }, [])
+
+  const addDocente = () => {
+    const payload = {
+      apellidoMat: 'asdasd', apellidoPat: 'asd', codigo, contrasena, correo, foto, nombre
+    }
+    fetch("/api/docente", {
+      method: 'POST',
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload)
+    })
+    .then((res)=> res.json())
+    .then((json)=> setAsesores(json))
+  }
 
   const submitRegistro = () => {
     const payload = {
