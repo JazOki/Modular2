@@ -67,8 +67,8 @@ model ProyectoE1 {
   nombre        String   @db.VarChar(100)
   urldocumento  String   @db.Text
   estado        Estado   @default(Entregado)
-  observacion   String?  @db.VarChar(300)
-  fechaRegistro DateTime @db.Date
+  observacion   String?  @default("Sin observaciones") @db.VarChar(300)
+  fechaRegistro DateTime @default(now())
   alumnos       Alumno[]
   docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
   docenteCodigo String   @db.VarChar(300)
@@ -80,8 +80,8 @@ model ProyectoE2 {
   urldocumento  String     @db.Text
   estado        Estado     @default(Entregado)
   evaluacion    Evaluacion @default(Sin_evaluar)
-  observacion   String?    @db.VarChar(300)
-  fechaRegistro DateTime   @db.Date
+  observacion   String?    @default("Sin observaciones") @db.VarChar(300)
+  fechaRegistro DateTime   @default(now())
   alumnos       Alumno[]
   docente       Docente    @relation(fields: [docenteCodigo], references: [codigo])
   docenteCodigo String     @db.VarChar(300)
@@ -92,8 +92,8 @@ model ProyectoE3 {
   nombre        String   @db.VarChar(100)
   urldocumento  String   @db.Text
   estado        Estado   @default(Entregado)
-  observacion   String?  @db.VarChar(300)
-  fechaRegistro DateTime @db.Date
+  observacion   String?  @default("Sin observaciones") @db.VarChar(300)
+  fechaRegistro DateTime @default(now())
   alumnos       Alumno[]
   docente       Docente  @relation(fields: [docenteCodigo], references: [codigo])
   docenteCodigo String   @db.VarChar(300)
