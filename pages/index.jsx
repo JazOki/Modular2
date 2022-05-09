@@ -4,10 +4,11 @@ import { privatePage } from "../lib/ironSessionConfig";
 import { useRouter } from 'next/router'
 
 const LogIn = () => {
+  //useState retorna dos variables dentro de un arreglo
   const [usuario, setUsuario] = useState("");
   const [contrasenia, setContrasenia] = useState("");
   const router = useRouter()
-
+  const onChange = ({ currentTarget }) => setContrasenia(currentTarget.value);
   const onSubmitLoginForm = (eventForm) => {
     // Funcion para la accion del boton
     eventForm.preventDefault(); // evitar que refresh en la pagina al darle click al boton y no se pierden la coockies ni el inicio de sesión
@@ -26,13 +27,13 @@ const LogIn = () => {
     })
       .then((response) => {
         response.json()
-        if(response.ok){
+        if (response.ok) {
           router.reload() // Recargar la pagina al iniciar sesion
         }
       })
       .catch((error) => console.log(error))
   };
-
+ 
   return (
     <div className="flex flex-col w-screen h-screen">
       <div className="flex flex-grow">
@@ -121,14 +122,14 @@ export const getServerSideProps = privatePage((context) => {
             permanent: false,
           },
         };
-       case "docente":
+      case "docente":
         return {
           redirect: {
             destination: "/dashboard_d",
             permanent: false,
           },
         };
-       case "admin":
+      case "admin":
         return {
           redirect: {
             destination: "/dashboard_a",
