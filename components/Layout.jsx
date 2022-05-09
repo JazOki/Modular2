@@ -65,7 +65,7 @@ const Layout = ({ children, nombre, matricula, codigo }) => {
                 Configuraciones
               </p>
               <SidebarButton nombre="Perfil" icono="person" />
-              <SidebarButton href="/api/logout" nombre="Salir" icono="exit_to_app"/>
+              <SidebarButton href="/api/logout/index" nombre="Salir" icono="exit_to_app"/>
             </div>
           </aside>
           <div className="flex-grow ">{children}</div>
