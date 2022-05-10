@@ -48,8 +48,6 @@ async function login(req, res) { // funcion asincrona con parametros
             ]
         }
     })
-
-    console.log(alumno)
     if (!alumno && !docente && !admin) // Valida si se encontro el usuario
         return res.status(400).json({ error: 'Usuario no encontrado' })
 
