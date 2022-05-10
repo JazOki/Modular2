@@ -19,6 +19,8 @@ const LogIn = () => {
       contrasena: contrasenia,
     };
 
+    // FETCH: proporciona una interfaz JavaScript para acceder y 
+    // manipular partes del canal HTTP, tales como peticiones y respuestas.
     fetch("/api/login", {
       method: "POST",
       headers: {
