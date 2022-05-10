@@ -9,6 +9,7 @@ const LogIn = () => {
   const [contrasenia, setContrasenia] = useState("");
   const router = useRouter()
   const onChange = ({ currentTarget }) => setContrasenia(currentTarget.value);
+  
   const onSubmitLoginForm = (eventForm) => {
     // Funcion para la accion del boton
     eventForm.preventDefault(); // evitar que refresh en la pagina al darle click al boton y no se pierden la coockies ni el inicio de sesión
