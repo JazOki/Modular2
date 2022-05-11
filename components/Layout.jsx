@@ -19,8 +19,22 @@ const Layout = ({ children, nombre, matricula, codigo}) => {
       .catch (error => console.error('Error:', error))
   }
 
+  const docente = () => {
+    var url = `getdocentebyproyectid?proyectoE1Id=${proyecto()}`;
+
+    fetch(url, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    }).then(res => res.json())
+      .then(data => console.log(data))
+      .catch (error => console.error('Error:', error))
+  }
+
   useEffect (()=> {
     proyecto()
+    docente()
   }, [])
 
 return (
