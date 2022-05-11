@@ -40,7 +40,7 @@ const Menu = () => {
           </select>
         </p>
         <form className="m-auto">
-        <p
+          <p
             id="asesor2Box"
             className="font-serif text-left text-xl pt-7 text-white"
           >
@@ -55,9 +55,9 @@ const Menu = () => {
             >
               Módulo:
               <input
-              type="text"
-              className="ml-2 w-80 text-black rounded-full"
-            ></input>
+                type="text"
+                className="ml-2 w-80 text-black rounded-full"
+              ></input>
             </a>
           </p>
           <p>
@@ -82,41 +82,41 @@ const Menu = () => {
             >
               Archivo PDF registrado:
               <input
-              type="text"
-              className=" pl-5 ml-2 w-80 text-black rounded-full"
-            ></input>  
+                type="text"
+                className=" pl-5 ml-2 w-80 text-black rounded-full"
+              ></input>
             </a>
           </p>
           <p className="pt-5">
-          <table class="table-fixed font">
-  <thead>
-    <tr>
-      <th className="border border-white px-4 py-2 text-white">Nombre</th>
-      <th className="border border-white px-4 py-2 text-white">Apellido materno</th>
-      <th className="border border-white px-4 py-2 text-white">Apellido paterno</th>
-      <th className="border border-white px-4 py-2 text-white">Código</th>
-      <th className="border border-white px-4 py-2 text-white">Matrícula</th>
-      <th className="border border-white px-4 py-2 text-white">Correo electrónico</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td >The Sliding Mr. Bones (Next Stop, Pottersville)</td>
-      <td>Malcolm Lockyer</td>
-      <td>1961</td>
-    </tr>
-    <tr>
-      <td>Witchy Woman</td>
-      <td>The Eagles</td>
-      <td>1972</td>
-    </tr>
-    <tr>
-      <td>Shining Star</td>
-      <td>Earth, Wind, and Fire</td>
-      <td>1975</td>
-    </tr>
-  </tbody>
-</table>
+            <table className="table-fixed font">
+              <thead>
+                <tr>
+                  <th className="border border-white px-4 py-2 text-white">Nombre</th>
+                  <th className="border border-white px-4 py-2 text-white">Apellido materno</th>
+                  <th className="border border-white px-4 py-2 text-white">Apellido paterno</th>
+                  <th className="border border-white px-4 py-2 text-white">Código</th>
+                  <th className="border border-white px-4 py-2 text-white">Matrícula</th>
+                  <th className="border border-white px-4 py-2 text-white">Correo electrónico</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td >The Sliding Mr. Bones (Next Stop, Pottersville)</td>
+                  <td>Malcolm Lockyer</td>
+                  <td>1961</td>
+                </tr>
+                <tr>
+                  <td>Witchy Woman</td>
+                  <td>The Eagles</td>
+                  <td>1972</td>
+                </tr>
+                <tr>
+                  <td>Shining Star</td>
+                  <td>Earth, Wind, and Fire</td>
+                  <td>1975</td>
+                </tr>
+              </tbody>
+            </table>
           </p>
           <p className="pt-20 ml-96">
             <button className=" text-black font-serif rounded left ml-10 w-32 h-12  transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
