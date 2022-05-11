@@ -3,22 +3,25 @@ import SidebarButton from "./SidebarButton";
 import Link from "next/link";
 import Script from "next/script";
 import { privatePage } from "../lib/ironSessionConfig";
+import { useEffect } from "react";
 
-const Layout = ({ children, nombre, matricula, codigo, proyectoE1Id, proyectoE2Id, proyectoE3Id}) => {
-  /*const proyecto = () => {
-    var url = '/api/getproyectobyalumnoid';
-    var data = { matricula: matricula};
+const Layout = ({ children, nombre, matricula, codigo}) => {
+  const proyecto = () => {
+    var url = `/api/getproyectobyalumnoid?matricula=${matricula}`;
 
     fetch(url, {
       method: 'GET',
-      body: JSON.stringify(data),
       headers: {
         'Content-Type': 'application/json'
       }
     }).then(res => res.json())
       .then(data => console.log(data))
       .catch (error => console.error('Error:', error))
-  }*/
+  }
+
+  useEffect (()=> {
+    proyecto()
+  }, [])
 
 return (
   <>
