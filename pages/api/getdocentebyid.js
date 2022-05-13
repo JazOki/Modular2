@@ -3,14 +3,13 @@ import { prisma } from "../../lib/prisma";
 export default async function (req, res) {
     if (req != 'GET') return res.status(400).send('Metodo no soportado')
     const {
-        ProyectoE1Id
+        codigo
     } = req.query
-    const docente = await prisma.docente.findUnique({
+    if (!id) return res.status(400).send('')
+    const docente = await prisma.Docente.findUnique({
         where: {
-            ProyectoE1: {
-                id: ProyectoE1Id
-            }
+            codigo
         }
     })
-    res.json({docenteCodigo:docente.codigo})
+    res.json({nombreDocente: docente.nombre})
 }
