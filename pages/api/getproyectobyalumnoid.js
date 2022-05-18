@@ -33,5 +33,8 @@ export default async function (req, res){
             }
         }
     })
-    res.json({Alumno:alumno})
+    if(alumno) {
+        // return 404
+    }
+    res.json({alumno})
 }
