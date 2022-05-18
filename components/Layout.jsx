@@ -5,28 +5,7 @@ import Script from "next/script";
 import { privatePage } from "../lib/ironSessionConfig";
 import { useEffect } from "react";
 
-const Layout = ({ children, nombre, matricula, codigo }) => {
-
-  const datos = async () => {
-    try {
-        var url = `/api/getproyectobyalumnoid?matricula=${matricula}`;
-        const response = await fetch(url, {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        const { data } = await response.json()
-        return data;
-    } catch (error) {
-        console.log(error)
-    }
-}
-
-useEffect(() => {
-    datos()
-}, [])
-
+const Layout = ({ children, nombre, matricula, codigo}) => {
   return (
     <>
       <Script id="load-watson" dangerouslySetInnerHTML={{
