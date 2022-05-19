@@ -1,6 +1,6 @@
 import { withIronSessionApiRoute } from "iron-session/next";
 import { ironOptions } from './../../lib/ironSessionConfig'
-import { prisma } from "../lib/prisma";
+import { prisma } from "../../lib/prisma";
 
 export default withIronSessionApiRoute(login, ironOptions) // Funcion que envuelve a login para generar cookies
 
