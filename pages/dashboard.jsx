@@ -6,6 +6,7 @@ const Dashboard = ({ alumno, nombre, isEnable, codigo, matricula }) => {
 
   </Layout>
 };
+
 // rutas protegidas
 export const getServerSideProps = privatePage(async (context) => {
   const user = context.req.session.user; //si no hay un usuario
