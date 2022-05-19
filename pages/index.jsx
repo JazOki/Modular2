@@ -82,9 +82,9 @@ const LogIn = () => {
                     setContrasenia(eventInput.target.value)
                   }
                 ></input>{" "}
-                <span className="material-icons-outlined text-white text-3xl">
+               { /*<span className="material-icons-outlined text-white text-3xl">
                   visibility
-                </span>
+                </span>*/}
               </p>
 
               <div className="pt-7 pl-24">
