@@ -16,20 +16,20 @@ const Layout = ({alumno, children, nombre, matricula, codigo}) => {
           event.data.context.skills['main skill'].user_defined.matricula = '${matricula}';
           event.data.context.skills['main skill'].user_defined.codigo = '${codigo}';
 
-          event.data.context.skills['main skill'].user_defined.estadoP1 = '${alumno.proyectoE1.estado}';
-          event.data.context.skills['main skill'].user_defined.estadoP2 = '${alumno.ProyectoE2.estado}';
-          event.data.context.skills['main skill'].user_defined.estadoP3 = '${alumno.ProyectoE3.estado}';
-          event.data.context.skills['main skill'].user_defined.asesorP1 = '${alumno.proyectoE1.docente.nombre}';
-          event.data.context.skills['main skill'].user_defined.asesorP2 = '${alumno.ProyectoE2.docente.nombre}';
-          event.data.context.skills['main skill'].user_defined.asesorP3 = '${alumno.ProyectoE3.docente.nombre}';
-          event.data.context.skills['main skill'].user_defined.fechaE1 = '${alumno.proyectoE1.fechaRegistro}';
-          event.data.context.skills['main skill'].user_defined.fechaE2 = '${alumno.ProyectoE2.fechaRegistro}';
-          event.data.context.skills['main skill'].user_defined.fechaE3 = '${alumno.ProyectoE3.fechaRegistro}';
-          event.data.context.skills['main skill'].user_defined.observacionesE1 = '${alumno.proyectoE1.observacion}';
-          event.data.context.skills['main skill'].user_defined.observacionesE2 = '${alumno.ProyectoE2.observacion}';
-          event.data.context.skills['main skill'].user_defined.observacionesE3 = '${alumno.ProyectoE3.observacion}';
-         
-
+          if(${alumno}){
+            event.data.context.skills['main skill'].user_defined.estadoP1 = '${alumno?.proyectoE1?.estado}';
+            event.data.context.skills['main skill'].user_defined.estadoP2 = '${alumno?.ProyectoE2?.estado}';
+            event.data.context.skills['main skill'].user_defined.estadoP3 = '${alumno?.ProyectoE3?.estado}';
+            event.data.context.skills['main skill'].user_defined.asesorP1 = '${alumno?.proyectoE1?.docente.nombre}';
+            event.data.context.skills['main skill'].user_defined.asesorP2 = '${alumno?.ProyectoE2?.docente.nombre}';
+            event.data.context.skills['main skill'].user_defined.asesorP3 = '${alumno?.ProyectoE3?.docente.nombre}';
+            event.data.context.skills['main skill'].user_defined.fechaE1 = '${alumno?.proyectoE1?.fechaRegistro}';
+            event.data.context.skills['main skill'].user_defined.fechaE2 = '${alumno?.ProyectoE2?.fechaRegistro}';
+            event.data.context.skills['main skill'].user_defined.fechaE3 = '${alumno?.ProyectoE3?.fechaRegistro}';
+            event.data.context.skills['main skill'].user_defined.observacionesE1 = '${alumno?.proyectoE1?.observacion}';
+            event.data.context.skills['main skill'].user_defined.observacionesE2 = '${alumno?.ProyectoE2?.observacion}';
+            event.data.context.skills['main skill'].user_defined.observacionesE3 = '${alumno?.ProyectoE3?.observacion}';
+          }
         }
             window.watsonAssistantChatOptions = {
             integrationID: "264e511b-6a10-47e0-a10c-aa9bd1e3b62b", // The ID of this integration.
