@@ -96,7 +96,7 @@ const LogIn = () => {
           </div>
         </aside>
         <header>
-          <div>
+          {/* <div>
             <p id="contenedorDerecho" className="w-full flex flex-col">
               <div className=" m-auto text-center pt-52">
                 <span className="material-icons-outlined text-9xl">book</span>
@@ -106,7 +106,7 @@ const LogIn = () => {
                 </p>
               </div>
             </p>
-          </div>
+          </div> */}
         </header>
       </div>
     </div>
