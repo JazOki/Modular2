@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import React, { useState } from "react";
 
-const consultas = () => {
+const Consultas = () => {
 
   //   const submitRegistro = () => {
   //     const payload = {
@@ -129,4 +129,4 @@ const consultas = () => {
   );
 };
 
-export default consultas;
+export default Consultas;

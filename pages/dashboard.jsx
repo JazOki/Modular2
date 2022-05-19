@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import { privatePage } from "../lib/ironSessionConfig";
 
-const dashboard = ({ alumno, nombre, isEnable, codigo, matricula }) => {
+const Dashboard = ({ alumno, nombre, isEnable, codigo, matricula }) => {
   return < Layout alumno={alumno} nombre={nombre} matricula={matricula} estado={isEnable ? "activo" : "inactivo"} codigo={codigo} >
 
   </Layout>
@@ -42,4 +42,4 @@ export const getServerSideProps = privatePage(async (context) => {
   }
 });
 
-export default dashboard;
+export default Dashboard;

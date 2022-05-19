@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
-import react, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const registro = () => {
+const Registro = () => {
   const [asesores,setAsesores] = useState([])
 
   useEffect(() => { 
@@ -130,4 +130,4 @@ const registro = () => {
   );
 };
 
-export default registro;
+export default Registro;

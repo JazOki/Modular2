@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 
-const modificaciones = () => {
+const Modificaciones = () => {
   return (
     <Layout nombre="Jazmin" matricula="A03440" codigo="Y1923553">
       <div className=" flex flex-col h-full font-serif text-left text-xl bg-gray-600">
@@ -42,7 +42,7 @@ const modificaciones = () => {
   );
 };
 
-export default modificaciones;
+export default Modificaciones;
 
 {
   /* <div className="font-serif w-2/6 h-80 text-left text-xl pl-14 pt-7 bg-gray-600 text-white">Escribre el nombre del proyecto:
