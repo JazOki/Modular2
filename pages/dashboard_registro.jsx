@@ -1,5 +1,5 @@
 import Layout from "../components/Layout";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "React";
 
 const registro = () => {
   const [asesores,setAsesores] = useState([])
