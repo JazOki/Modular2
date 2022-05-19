@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import React, { useState, useEffect } from "react";
 
-const Menu = () => {
+const registro = () => {
   const [asesores,setAsesores] = useState([])
 
   useEffect(() => { 
@@ -130,4 +130,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default registro;

@@ -1,7 +1,7 @@
 import Layout from "../components/Layout";
 import React, { useState } from "react";
 
-const Menu = () => {
+const consultas = () => {
 
   //   const submitRegistro = () => {
   //     const payload = {
@@ -129,4 +129,4 @@ const Menu = () => {
   );
 };
 
-export default Menu;
+export default consultas;
