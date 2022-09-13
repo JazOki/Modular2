@@ -46,71 +46,52 @@ const Registro = () => {
   };
 
   return (
-    <Layout nombre="Jazmin" matricula="A03440" codigo="Y1923553">
-      <div className=" flex flex-col h-full font-serif text-left text-xl bg-gray-600">
+    <Layout>
+      <div className=" flex flex-col h-full font-serif text-left text-xl bg-white">
         <form className="m-auto">
-          <p className="ml-80 font-serif text-xl text-white">
-            Etapas:
-            <select
-              name="select"
-              className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto"
-            >
-              <option value="etapa1">Etapa 1: Planteamiento del problema </option>
-              <option value="etapa2">Etapa 2: Resumen del protyecto </option>
-              <option value="etapa3">Etapa 3: Documentación final </option>
-            </select>
-          </p>
-          <p className="font-serif text-xl pt-20 text-white">
+        <div className=" ml-80 pl-80 font-serif text-xl text-black-600">
+            <p className="  ">
+              Etapas:
+              <select
+                name="select"
+                className="font-serif ml-2  rounded-full text-black-600 w-auto outline-double outline-3 outline-offset-2 ..."
+              >
+                <option value="etapa1">Etapa 1: Planteamiento del problema </option>
+                <option value="etapa2">Etapa 2: Resumen del protyecto </option>
+                <option value="etapa3">Etapa 3: Documentación final </option>
+              </select>
+            </p>
+          </div>
+          <p className="font-serif text-xl pt-20 text-black">
             Escribe el nombre del proyecto:
             <input
               type="text"
-              className="ml-2 w-80 text-black rounded-full"
+              className="ml-2 w-80 text-black rounded-full outline-double outline-3 outline-offset-2 ..."
             ></input>
           </p>
-          <p className="font-serif text-xl pt-7 text-white">
+          <p className="font-serif text-xl pt-7 text-black">
             Elige el archivo PDF que deseas subir:
-            <input type="file" className="ml-2 text-black rounded-full"></input>
+            <input type="file" className="ml-2 text-black rounded-full outline-double outline-3 outline-offset-2 ..."></input>
           </p>
-          {/* <p
-            id="integrantesBox"
-            className="font-serif text-left text-xl pl-0 pt-7 text-white"
-          >
-            Número de integrantes:
-            <select
-              name="select"
-              className="rounded-full bg-white ml-2 text-black"
-            >
-              <option value="nothing">Selecciona... </option>
-              <option value="integrantes">2</option>
-              <option value="integarntes">3</option>
-            </select>
-          </p> */}
-          <div>
-            {/* <p id="integrantes2Box"> Integrantes: </p>
-            <select name="integrantes" className="w-full" multiple={true}>
-              <option value="integrantes">2</option>
-              <option value="integarntes">3</option>
-        </select> */}
-          </div>
           <p
             id="asesor2Box"
-            className="font-serif text-left text-xl pt-7 text-white"
+            className="font-serif text-left text-xl pt-7 text-black"
           >
             Asesor:
             <select
               name="select"
-              className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto pr-5"
+              className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto pr-5 outline-double outline-3 outline-offset-2 ..."
             >
               <option value="nothing">Selecciona... </option>
             </select>
             <a
               id="modulo2Box"
-              className="font-serif ml-7 text-left text-xl pl-0 pt-5 text-white"
+              className="font-serif ml-7 text-left text-xl pl-0 pt-5 text-black "
             >
               Modulo:
               <select
                 name="select"
-                className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto"
+                className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto outline-double outline-3 outline-offset-2 ..."
               >
                 <option value="nothing">Selecciona... </option>
                 <option value="etapa1"> Modulo 1 </option>
@@ -119,11 +100,13 @@ const Registro = () => {
               </select>
             </a>
           </p>
-          <p className="pt-20 ml-96">
-            <button className=" text-black font-serif rounded left ml-10 w-32 h-12  transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-              Registrar
-            </button>
-          </p>
+          <div className="ml-96">
+            <p className="pt-20 ml-96 text-white">
+              <button className="font-serif rounded left ml-10 w-32 h-12 transition bg-blue-900 hover:-translate-y-1 hover:scale-110 hover:bg-blue duration-150">
+                Registrar
+              </button>
+            </p>
+          </div>
         </form>
       </div>
     </Layout>

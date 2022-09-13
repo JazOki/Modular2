@@ -11,7 +11,7 @@ const Modificaciones = () => {
               Etapas:
               <select
                 name="select"
-                className="font-serif ml-2 text-center rounded-full bg-blue text-black-600 w-auto outline-double outline-3 outline-offset-2 ..."
+                className="font-serif ml-2 rounded-full bg-blue text-black-600 w-auto outline-double outline-3 outline-offset-2 ..."
               >
                 <option value="etapa1">Etapa 1: Planteamiento del problema </option>
                 <option value="etapa2">Etapa 2: Resumen del protyecto </option>
