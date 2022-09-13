@@ -87,7 +87,7 @@ const Consultas = () => {
               ></input>
             </a>
           </p>
-          <p className="pt-5">
+          {/* <p className="pt-5">
             <table className="table-fixed font">
               <thead>
                 <tr>
@@ -117,12 +117,56 @@ const Consultas = () => {
                 </tr>
               </tbody>
             </table>
-          </p>
-          <p className="pt-20 ml-96">
-            <button className=" text-black font-serif rounded left ml-10 w-32 h-12  transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-              Registrar
-            </button>
-          </p>
+          </p> */}
+          <div>
+            <p className="pt-5">
+              <table class="table-fixed border-separate border border-slate-400 ...">
+                <thead>
+                  <tr className="border-white px-4 py-2 text-white">
+                    <th className="border border-slate-300 ...">Nombre</th>
+                    <th className="border border-slate-300 ...">Apellido paterno</th>
+                    <th className="border border-slate-300 ...">Apellido materno</th>
+                    <th className="border border-slate-300 ...">Código</th>
+                    <th className="border border-slate-300 ...">Matrícula</th>
+                    <th className="border border-slate-300 ...">Correo electrónico</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-white px-4 py-2 text-white">
+                    <td className="border border-slate-300 ...">Silvia Jazmin  </td>
+                    <td className="border border-slate-300 ...">Castellanos</td>
+                    <td className="border border-slate-300 ...">Ornelas</td>
+                    <td className="border border-slate-300 ...">Y19832996</td>
+                    <td className="border border-slate-300 ...">A03340</td>
+                    <td className="border border-slate-300 ...">A03440@universidad-une.com</td>
+                  </tr>
+                  <tr className="border-white px-4 py-2 text-white">
+                    <td className="border border-slate-300 ...">Miriam Tamara  </td>
+                    <td className="border border-slate-300 ...">Hernández</td>
+                    <td className="border border-slate-300 ...">Garcia</td>
+                    <td className="border border-slate-300 ...">Y19833046</td>
+                    <td className="border border-slate-300 ...">A03324</td>
+                    <td className="border border-slate-300 ...">A03324@universidad-une.com</td>
+                  </tr>
+                  <tr className="border-white px-4 py-2 text-white">
+                    <td className="border border-slate-300 ...">Andrea Sarai  </td>
+                    <td className="border border-slate-300 ...">Valdivia</td>
+                    <td className="border border-slate-300 ...">Mártinez</td>
+                    <td className="border border-slate-300 ...">Y10554314</td>
+                    <td className="border border-slate-300 ...">A06442</td>
+                    <td className="border border-slate-300 ...">A06442@universidad-une.com</td>
+                  </tr>
+                </tbody>
+              </table>
+            </p>
+          </div>
+          <div>
+            <p className="pt-20 ml-96">
+              <button className=" text-black font-serif rounded left ml-10 w-32 h-12  transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+                Registrar
+              </button>
+            </p>
+          </div>
         </form>
       </div>
     </Layout>
