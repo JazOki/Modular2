@@ -47,7 +47,7 @@ const Registro = () => {
 
   return (
     <Layout>
-      <div className=" flex flex-col h-full font-serif text-left text-xl bg-white">
+      <div className=" flex flex-col h-full font-serif text-left text-xl bg-slate-50">
         <form className="m-auto">
         <div className=" ml-80 pl-80 font-serif text-xl text-black-600">
             <p className="  ">
