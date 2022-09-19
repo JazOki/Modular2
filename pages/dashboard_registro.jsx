@@ -2,12 +2,12 @@ import Layout from "../components/Layout";
 import { useState, useEffect } from "react";
 
 const Registro = () => {
-  const [asesores,setAsesores] = useState([])
+  const [asesores, setAsesores] = useState([])
 
-  useEffect(() => { 
+  useEffect(() => {
     fetch("/api/docente")
-    .then((res)=> res.json())
-    .then((json)=> setAsesores(json))
+      .then((res) => res.json())
+      .then((json) => setAsesores(json))
   }, [])
 
   const addDocente = () => {
@@ -19,8 +19,8 @@ const Registro = () => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
     })
-    .then((res)=> res.json())
-    .then((json)=> setAsesores(json))
+      .then((res) => res.json())
+      .then((json) => setAsesores(json))
   }
 
   const submitRegistro = () => {
@@ -49,7 +49,27 @@ const Registro = () => {
     <Layout>
       <div className=" flex flex-col h-full font-serif text-left text-xl bg-slate-50">
         <form className="m-auto">
-        <div className=" ml-80 pl-80 font-serif text-xl text-black-600">
+          <figure class="md:flex bg-slate-100 rounded-xl p-8 md:p-0 dark:bg-slate-800">
+            {/* <img class="w-24 h-24 md:w-48 md:h-auto md:rounded-none rounded-full mx-auto" src="/sarah-dayan.jpg" alt="" width="384" height="512"> */}
+              <div class="pt-6 md:p-8 text-center md:text-left space-y-4">
+                <blockquote>
+                  <p class="text-lg font-medium">
+                    “Tailwind CSS is the only framework that I've seen scale
+                    on large teams. Its easy to customize, adapts to any design,
+                    and the build size is tiny.”
+                  </p>
+                </blockquote>
+                <figcaption class="font-medium">
+                  <div class="text-sky-500 dark:text-sky-400">
+                    Sarah Dayan
+                  </div>
+                  <div class="text-slate-700 dark:text-slate-500">
+                    Staff Engineer, Algolia
+                  </div>
+                </figcaption>
+              </div>
+          </figure>
+          {/* <div className=" ml-80 pl-80 font-serif text-xl text-black-600">
             <p className="  ">
               Etapas:
               <select
@@ -106,7 +126,7 @@ const Registro = () => {
                 Registrar
               </button>
             </p>
-          </div>
+          </div> */}
         </form>
       </div>
     </Layout>
