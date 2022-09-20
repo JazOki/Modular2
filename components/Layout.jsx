@@ -42,7 +42,7 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
       <Script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js" />
       <Script src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js" />
       <div className="flex flex-col w-screen h-screen">
-        <header className="px-5 bg-blue-900 text-right h-12 flex items-center justify-between">
+        <header className="px-5 bg-blue-900 text-center h-12 flex items-center justify-between">
           <p className="ml-5 text-white font-serif flex text-center items-start px-14">
             Alumno
           </p>
