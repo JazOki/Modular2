@@ -46,205 +46,75 @@ const Registro = () => {
   };
 
   return (
+    // w-16 md:w-32 lg:w-48 responsive design
     <Layout>
-      <div className=" flex flex-col h-full font-serif text-left text-xl bg-slate-50">
-        <form className=" m-auto bg-slate-300 ">
-          <div class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2x1">
-            <div class="md:flex">
-              <div class="md:shrink-0">
-                {/* <img class="h-48 w-full object-cover md:h-full md:w-48" src="/img/store.jpg" alt="Man looking at item at a store"> */}
-              </div>
-              <div class="p-8">
-                <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">Case study</div>
-                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Finding customers for your new business</a>
-                <p class="mt-2 text-slate-500">Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* <div className=" ml-80 pl-80 font-serif text-xl text-black-600 ">
-                <p className="  ">
+      <div className="flex items-center justify-center h-full font-serif text-left text-xl bg-slate-50">
+        <div className="bg-slate-300 rounded shadow-xl">
+          <form>
+            <div class="flex flex-col gap-5 p-6 md:p-8 text-center md:text-left">
+              <div className="w-full flex flex-col justify-end">
+                <p className="font-serif text-xl text-black-600 ">
                   Etapas:
-                  <select
-                    name="select"
-                    className="font-serif ml-2  rounded-full text-black-600 w-auto outline-double outline-3 outline-offset-2 ..."
-                  >
-                    <option value="etapa1">Etapa 1: Planteamiento del problema </option>
-                    <option value="etapa2">Etapa 2: Resumen del protyecto </option>
-                    <option value="etapa3">Etapa 3: Documentación final </option>
-                  </select>
                 </p>
-              </div>
-              <p className="font-serif text-xl pt-20 text-black">
-                Escribe el nombre del proyecto:
-                <input
-                  type="text"
-                  className="ml-2 w-80 text-black rounded-full outline-double outline-3 outline-offset-2 ..."
-                ></input>
-              </p>
-              <p className="font-serif text-xl pt-7 text-black">
-                Elige el archivo PDF que deseas subir:
-                <input type="file" className="ml-2 text-black rounded-full outline-double outline-3 outline-offset-2 ..."></input>
-              </p>
-              <p
-                id="asesor2Box"
-                className="font-serif text-left text-xl pt-7 text-black"
-              >
-                Asesor:
                 <select
                   name="select"
-                  className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto pr-5 outline-double outline-3 outline-offset-2 ..."
-                >
-                  <option value="nothing">Selecciona... </option>
-                </select>
-                <a
-                  id="modulo2Box"
-                  className="font-serif ml-7 text-left text-xl pl-0 pt-5 text-black "
-                >
-                  Modulo:
-                  <select
-                    name="select"
-                    className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto outline-double outline-3 outline-offset-2 ..."
-                  >
-                    <option value="nothing">Selecciona... </option>
-                    <option value="etapa1"> Modulo 1 </option>
-                    <option value="etapa2"> Modulo 2 </option>
-                    <option value="etapa3"> Modulo 3 </option>
-                  </select>
-                </a>
-              </p>
-              <div className="ml-96">
-                <p className="pt-20 ml-96 text-white">
-                  <button className="font-serif rounded left ml-10 w-32 h-12 transition bg-blue-900 hover:-translate-y-1 hover:scale-110 hover:bg-blue duration-150">
-                    Registrar
-                  </button>
-                </p>
-              </div> */}
-
-          {/* </div>
-          </div> */}
-          {/* <div class="container mx-auto">
-            <div className=" ml-80 pl-80 font-serif text-xl text-black-600 ">
-              <p className="  ">
-                Etapas:
-                <select
-                  name="select"
-                  className="font-serif ml-2  rounded-full text-black-600 w-auto outline-double outline-3 outline-offset-2 ..."
+                  className="font-serif text-black-600 w-auto outline-double outline-3"
                 >
                   <option value="etapa1">Etapa 1: Planteamiento del problema </option>
                   <option value="etapa2">Etapa 2: Resumen del protyecto </option>
                   <option value="etapa3">Etapa 3: Documentación final </option>
                 </select>
+              </div>
+              <p className="font-serif text-xl text-black ">
+                Escribe el nombre del proyecto:
+                <input
+                  type="text"
+                  className="text-black outline-double outline-3 w-full"
+                ></input>
               </p>
-            </div>
-            <p className="font-serif text-xl pt-20 text-black">
-              Escribe el nombre del proyecto:
-              <input
-                type="text"
-                className="ml-2 w-80 text-black rounded-full outline-double outline-3 outline-offset-2 ..."
-              ></input>
-            </p>
-            <p className="font-serif text-xl pt-7 text-black">
-              Elige el archivo PDF que deseas subir:
-              <input type="file" className="ml-2 text-black rounded-full outline-double outline-3 outline-offset-2 ..."></input>
-            </p>
-            <p
-              id="asesor2Box"
-              className="font-serif text-left text-xl pt-7 text-black"
-            >
-              Asesor:
-              <select
-                name="select"
-                className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto pr-5 outline-double outline-3 outline-offset-2 ..."
-              >
-                <option value="nothing">Selecciona... </option>
-              </select>
-              <a
-                id="modulo2Box"
-                className="font-serif ml-7 text-left text-xl pl-0 pt-5 text-black "
-              >
-                Modulo:
+              <p className="font-serif text-xl text-black">
+                Elige el archivo PDF que deseas subir:
+              </p>
+                <input type="file" className=" text-black outline-double outline-3"></input>
+              <div className="flex justify-center gap-2">
+                <p
+                  id="asesor2Box"
+                  className="font-serif text-left text-xl text-black"
+                >
+                  Asesor:
+                </p>
                 <select
                   name="select"
-                  className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto outline-double outline-3 outline-offset-2 ..."
+                  className="font-serif  text-center bg-white text-black w-auto outline-double outline-3 "
                 >
-                  <option value="nothing">Selecciona... </option>
+                  <option value="nothing">Selecciona </option>
+                </select>
+                <div className="w-3"></div>
+                <p
+                  id="modulo2Box"
+                  className="font-serif text-left text-xl text-black "
+                >
+                  Modulo:
+                </p>
+
+                <select
+                  name="select"
+                  className="font-serif bg-white text-black w-auto outline-double outline-3 outline-offset-2 "
+                >
+                  <option value="nothing">Selecciona </option>
                   <option value="etapa1"> Modulo 1 </option>
                   <option value="etapa2"> Modulo 2 </option>
                   <option value="etapa3"> Modulo 3 </option>
                 </select>
-              </a>
-            </p>
-            <div className="ml-96">
-              <p className="pt-20 ml-96 text-white">
-                <button className="font-serif rounded left ml-10 w-32 h-12 transition bg-blue-900 hover:-translate-y-1 hover:scale-110 hover:bg-blue duration-150">
-                  Registrar
-                </button>
-              </p>
+              </div>
+              <div className="flex justify-end mt-3">
+                  <button className="text-white font-serif rounded left ml-10 w-32 h-12 transition bg-blue-900 hover:-translate-y-1 hover:scale-110 hover:bg-blue duration-150">
+                    Registrar
+                  </button>
+              </div>
             </div>
-          </div> */}
-        </form>
-        {/* <form className="m-auto">
-          {/* grid-container contacto-container }
-        <div className=" ml-80 pl-80 font-serif text-xl text-black-600 ">
-            <p className="  ">
-              Etapas:
-              <select
-                name="select"
-                className="font-serif ml-2  rounded-full text-black-600 w-auto outline-double outline-3 outline-offset-2 ..."
-              >
-                <option value="etapa1">Etapa 1: Planteamiento del problema </option>
-                <option value="etapa2">Etapa 2: Resumen del protyecto </option>
-                <option value="etapa3">Etapa 3: Documentación final </option>
-              </select>
-            </p>
-          </div>
-          <p className="font-serif text-xl pt-20 text-black">
-            Escribe el nombre del proyecto:
-            <input
-              type="text"
-              className="ml-2 w-80 text-black rounded-full outline-double outline-3 outline-offset-2 ..."
-            ></input>
-          </p>
-          <p className="font-serif text-xl pt-7 text-black">
-            Elige el archivo PDF que deseas subir:
-            <input type="file" className="ml-2 text-black rounded-full outline-double outline-3 outline-offset-2 ..."></input>
-          </p>
-          <p
-            id="asesor2Box"
-            className="font-serif text-left text-xl pt-7 text-black"
-          >
-            Asesor:
-            <select
-              name="select"
-              className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto pr-5 outline-double outline-3 outline-offset-2 ..."
-            >
-              <option value="nothing">Selecciona... </option>
-            </select>
-            <a
-              id="modulo2Box"
-              className="font-serif ml-7 text-left text-xl pl-0 pt-5 text-black "
-            >
-              Modulo:
-              <select
-                name="select"
-                className="font-serif ml-2 text-center rounded-full bg-white text-black w-auto outline-double outline-3 outline-offset-2 ..."
-              >
-                <option value="nothing">Selecciona... </option>
-                <option value="etapa1"> Modulo 1 </option>
-                <option value="etapa2"> Modulo 2 </option>
-                <option value="etapa3"> Modulo 3 </option>
-              </select>
-            </a>
-          </p>
-          <div className="ml-96">
-            <p className="pt-20 ml-96 text-white">
-              <button className="font-serif rounded left ml-10 w-32 h-12 transition bg-blue-900 hover:-translate-y-1 hover:scale-110 hover:bg-blue duration-150">
-                Registrar
-              </button>
-            </p>
-          </div>
-        </form> */}
+          </form>
+        </div>
       </div>
     </Layout>
   );
