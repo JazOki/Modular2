@@ -6,11 +6,7 @@ export default async function (req, res){
         matricula
     } = req.query
     if (!matricula) return res.status(400).send('')
-    // const alumno = await prisma.Alumno.findUnique({
-    //     where: {
-    //         matricula
-    //     }
-    // })
+
     const alumno = await prisma.Alumno.findUnique({
         where: {
             matricula
