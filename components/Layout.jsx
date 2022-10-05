@@ -71,7 +71,7 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
               <SidebarButton href="/dashboard_Registro" nombre="Registrar" icono="description" />
               <SidebarButton href="/dashboard_Modificaciones" nombre="Modificaciones" icono="note_alt" />
               <SidebarButton href="/dashboard_Consultas" nombre="Consultas" icono="source" />
-              <SidebarButton nombre="Observaciones" icono="find_in_page" />
+              <SidebarButton href="/dashboard_Observaciones" nombre="Observaciones" icono="find_in_page" />
             </div>
             <div>
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">

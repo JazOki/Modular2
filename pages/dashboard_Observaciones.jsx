@@ -1,12 +1,12 @@
 import Layout from "../components/Layout";
 
-const Modificaciones = () => {
+const Observaciones = () => {
   return (
     <Layout>
       <div className="flex items-center justify-center h-full font-serif text-left text-xl bg-slate-50">
         <div className="bg-slate-300 rounded shadow-xl">
           <form>
-            <div className="flex flex-col gap-5 p-6 md:p-8 text-center md:text-left">
+            <div className="grid grid-cols-2 gap-5 p-6 md:p-8 text-center md:text-left">
               <div className="w-full flex flex-col justify-end">
                 <p className="font-serif text-xl text-black-600 ">
                   Etapas:
@@ -21,20 +21,28 @@ const Modificaciones = () => {
                 </select>
               </div>
               <p className="font-serif text-xl text-black ">
-                Escribe el nombre del proyecto:
+                Asesor:
                 <input
                   type="text"
-                  className="text-black outline-double outline-3 w-full"
+                  className="text-black outline-double outline-3 w-full" readOnly
                 ></input>
               </p>
-              <p className="font-serif text-xl text-black">
-                Elige el archivo PDF que deseas subir:
+              <p className="font-serif text-xl text-black ">
+                Nombre:
+                <input
+                  type="text"
+                  className="text-black outline-double outline-3 w-full" readOnly
+                ></input>
               </p>
-              <input type="file" className=" text-black outline-double outline-3"></input>
-              <div className="flex justify-end mt-3">
-                <button className="text-white font-serif rounded left ml-10 w-32 h-12 transition bg-blue-900 hover:-translate-y-1 hover:scale-110 hover:bg-blue duration-150">
-                  Modificar
-                </button>
+              <p className="font-serif text-xl text-black ">
+                Fecha de revisión:
+                <input
+                  type="text"
+                  className="text-black outline-double outline-3 w-full" readOnly
+                ></input>
+              </p>
+              <div>
+
               </div>
             </div>
           </form>
@@ -44,4 +52,4 @@ const Modificaciones = () => {
   );
 };
 
-export default Modificaciones;
+export default Observaciones;

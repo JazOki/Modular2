@@ -51,7 +51,7 @@ const Registro = () => {
       <div className="flex items-center justify-center h-full font-serif text-left text-xl bg-slate-50">
         <div className="bg-slate-300 rounded shadow-xl">
           <form>
-            <div class="flex flex-col gap-5 p-6 md:p-8 text-center md:text-left">
+            <div className="flex flex-col gap-5 p-6 md:p-8 text-center md:text-left">
               <div className="w-full flex flex-col justify-end">
                 <p className="font-serif text-xl text-black-600 ">
                   Etapas:
@@ -69,7 +69,7 @@ const Registro = () => {
                 Escribe el nombre del proyecto:
                 <input
                   type="text"
-                  className="text-black outline-double outline-3 w-full"
+                  className="text-black outline-double outline-3 w-full" placeholder="Gestor de Proyectos Modulares ..."
                 ></input>
               </p>
               <p className="font-serif text-xl text-black">
