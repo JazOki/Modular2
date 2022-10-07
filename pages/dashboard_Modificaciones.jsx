@@ -30,7 +30,7 @@ const Modificaciones = () => {
               <p className="font-serif text-xl text-black">
                 Elige el archivo PDF que deseas subir:
               </p>
-              <input type="file" class="block w-full text-sm text-slate-500
+              <input type="file" className="block w-full text-sm text-slate-500
                 file:mr-4 file:py-2 file:px-4
                 file:rounded-full file:border-0
                 file:text-sm file:font-semibold
