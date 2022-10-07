@@ -1,10 +1,10 @@
-import Layout from "../components/Layout";
+import Layout from "../components/LayoutDocente";
 
 const Consultasd = () => {
   return (
     <Layout>
       <div className="flex items-center justify-center h-full font-serif text-left text-xl bg-slate-50">
-        <div className="bg-slate-300 rounded shadow-xl">
+        <div className="bg-violet-300 rounded shadow-xl">
           <form>
             <div className="grid grid-cols-2 gap-5 p-6 md:p-8 text-center md:text-left">
               <div className="w-full flex flex-col justify-end">
@@ -41,6 +41,7 @@ const Consultasd = () => {
                   className="text-black outline-double outline-3 w-full" readOnly
                 ></input>
               </p>
+
               <p className="font-serif text-xl text-black col-span-2">
                 Observación:
                 <textarea id="message" rows="8" className="block p-2.5 w-full text-lg text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Observaciones del asesor..." readOnly ></textarea>
