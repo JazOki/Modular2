@@ -34,7 +34,7 @@ const LayoutD = ({ children, nombre, codigo }) => {
             <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">
               Documentación
             </p>
-            <SidebarButtonD nombre="Consulta" icono="find_in_page" />
+            <SidebarButtonD href="/dashboard_" nombre="Consulta" icono="find_in_page" />
           </div>
           <div>
             <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">
