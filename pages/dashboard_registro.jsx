@@ -75,7 +75,12 @@ const Registro = () => {
               <p className="font-serif text-xl text-black">
                 Elige el archivo PDF que deseas subir:
               </p>
-                <input type="file" className=" text-black outline-double outline-3"></input>
+              <input type="file" class="block w-full text-sm text-slate-500
+                file:mr-4 file:py-2 file:px-4
+                file:rounded-full file:border-0
+                file:text-sm file:font-semibold
+                file:bg-gray-700 file:text-white
+                hover:file:bg-black"></input>
               <div className="flex justify-center gap-2">
                 <p
                   id="asesor2Box"

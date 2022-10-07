@@ -54,7 +54,6 @@ const LogIn = () => {
                 {""}
                 Correo institucional:{""}
               </p>
-
               <p className="pt-5">
                 <input
                   type="text"
@@ -121,7 +120,7 @@ export const getServerSideProps = privatePage((context) => {
       case "alumno":
         return {
           redirect: {
-            destination: "/dashboard",
+            destination: "/dashboard",//cambiar
             permanent: false,
           },
         };
