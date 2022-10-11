@@ -54,13 +54,12 @@ const LogIn = () => {
                 {""}
                 Correo institucional:{""}
               </p>
-
               <p className="pt-5">
                 <input
                   type="text"
                   className="w-48 rounded-3xl"
                   value={usuario}
-                  onChange={(eventInput) => setUsuario(eventInput.target.value)}
+                  onChange={(eventInput) => setUsuario(eventInput.target.value)} placeholder="Matrícula"
                 ></input>{" "}
                 <span className="font-serif text-white absolute">
                   {" "}
@@ -80,7 +79,7 @@ const LogIn = () => {
                   value={contrasenia}
                   onChange={(eventInput) =>
                     setContrasenia(eventInput.target.value)
-                  }
+                  } placeholder="******"
                 ></input>{" "}
                 <span className="material-icons-outlined text-white text-3xl">
                   {/*visibility*/}
@@ -121,7 +120,7 @@ export const getServerSideProps = privatePage((context) => {
       case "alumno":
         return {
           redirect: {
-            destination: "/dashboard",
+            destination: "/dashboard",//cambiar
             permanent: false,
           },
         };
