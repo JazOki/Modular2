@@ -27,9 +27,9 @@ const LayoutD = ({ children, nombre, codigo }) => {
             <span className="text-white flex justify-center material-icons text-9xl">
               account_circle
             </span>
-            <p className="text-white font-serif flex items-center">
+            {/* <p className="text-white font-serif flex items-center">
               Código: {codigo}
-            </p>
+            </p> */}
           </div>
           <div>
             <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">

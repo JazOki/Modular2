@@ -8,14 +8,15 @@ const MenuA = () => {
 
 // rutas protegidas
 export const getServerSideProps = privatePage((context) => {
-  const user = context.req.session.user; //si no hay un usuario
+  const user = context.req.session.user; //si hay un usuario
   if (!user) {
-        return {
-          redirect: {
-            destination: "/api/logout",
-            permanent: false,
-          },
-        };
+    return {
+      redirect: {
+        destination: "/api/logout",
+        permanent: false,
+      },
+    };
+
   }
   return {
     props: {},
