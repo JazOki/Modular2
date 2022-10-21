@@ -35,6 +35,7 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
             onLoad: function (instance) { 
               instance.on({ type: "pre:send", handler: preSendhandler });
               instance.render(); 
+              window.watsonInstance =  instance
             }
           };`,
       }}
@@ -78,7 +79,17 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
                 Configuraciones
               </p>
               <SidebarButton nombre="Perfil" icono="person" />
-              <SidebarButton href="/api/logout" nombre="Salir" icono="exit_to_app" />
+              <a href="#" onClick={()=>{
+                if(window.watsonInstance){
+                  window.watsonInstance.destroySession()
+                }
+                window.location.href = "/api/logout"     
+              }} className="hover:bg-blue-400 w-full flex items-center px-5 h-8 touch-auto">
+                <span className="text-white mr-2 material-icons">exit_to_app</span>
+                <span className="text-white font-serif flex items-center">
+                  Salir
+                </span>
+              </a>
             </div>
           </aside>
           <div className="flex-grow ">{children}</div>
