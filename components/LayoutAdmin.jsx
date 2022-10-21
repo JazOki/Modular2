@@ -26,22 +26,13 @@ const LayoutAdmin = ({ children, nombre, user, estado, codigo }) => {
             <span className="text-white flex justify-center material-icons text-9xl">
               account_circle
             </span>
-            <p className="text-white font-serif flex items-center">
-              Usuario: {user}
-            </p>
-            <p className="text-white font-serif flex items-center">
-              Código: {codigo}
-            </p>
-            <p className="text-white font-serif flex items-center">
-              Estado: {estado}
-            </p>
           </div>
           <div>
             <p className="text-green-500 justify-center border-b border-green-500 flex items-center">
               Documentación
             </p>
-            <SidebarButtonA nombre="Busquedas" icono="format_list_bulleted" />
-            <SidebarButtonA nombre="Registrar" icono="note_add" />
+            <SidebarButtonA href="/dashboard_busquedas" nombre="Busquedas" icono="format_list_bulleted" />
+            <SidebarButtonA href="/dashboard_registrar" nombre="Registrar" icono="note_add" />
           </div>
           <div>
             <p className="text-green-500 justify-center border-b border-green-500 flex items-center">
