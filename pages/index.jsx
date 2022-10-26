@@ -40,34 +40,41 @@ const LogIn = () => {
   return (
     <div className="flex flex-col w-screen h-screen">
       <div className="flex flex-grow">
-        <aside className="justify-evenly bg-gray-800">
+        <aside className="justify-evenly bg-gray-800 font-serif">
           <div className="flex flex-col items-center">
-            <div className="flex mr-3 text-4xl pt-10 text-center text-white flex-col font-serif">
+            <div className="flex mr-3 text-4xl pt-24 text-center text-white flex-col">
               <p> ¡Bienvenido! </p>
               <span className="justify-center material-icons text-9xl">
                 account_circle
               </span>
             </div>
 
-            <form onSubmit={onSubmitLoginForm} className="pt-7 pl-12 pr-7">
-              <p className="font-serif text-xl pt-5 text-white">
+            <form onSubmit={onSubmitLoginForm} className="pt-20 pl-12 pr-7">
+              <p className=" text-xl pt-5 text-white">
                 {""}
                 Correo institucional:{""}
               </p>
-              <p className="pt-5">
+              <p className="">
                 <input
                   type="text"
-                  className="w-48 rounded-3xl"
                   value={usuario}
-                  onChange={(eventInput) => setUsuario(eventInput.target.value)} placeholder="Matrícula"
+                  onChange={(eventInput) => setUsuario(eventInput.target.value)} 
+                  placeholder="Matrícula"
                 ></input>{" "}
-                <span className="font-serif text-white absolute">
+                <span className=" text-white">
                   {" "}
                   @universidad-une.com{" "}
                 </span>
               </p>
+              {/* <p className=" text-xl text-black ">
+                Escribe el nombre del proyecto:
+                <input
+                  type="text"
+                  className="text-black outline-double outline-3 w-full" placeholder="Gestor de Proyectos Modulares ..."
+                ></input>
+              </p> */}
 
-              <p className="font-serif text-xl pt-5 text-white">
+              <p className=" text-xl pt-5 text-white">
                 {""}
                 Contraseña:{""}
               </p>
@@ -75,19 +82,19 @@ const LogIn = () => {
               <p>
                 <input
                   type="password"
-                  className="w-80 rounded-3xl"
+                  className="w-80"
                   value={contrasenia}
                   onChange={(eventInput) =>
                     setContrasenia(eventInput.target.value)
                   } placeholder="******"
                 ></input>{" "}
-                <span className="material-icons-outlined text-white text-3xl">
-                  {/*visibility*/}
+                <span className="material-icons-outlined text-white">
+                  visibility
                 </span>
               </p>
 
-              <div className="pt-7 pl-24">
-                <button className="font-serif rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+              <div className=" flex pt-7 pl-24">
+                <button className=" rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
                   Ingresar
                 </button>
               </div>
@@ -99,7 +106,7 @@ const LogIn = () => {
             <p id="contenedorDerecho" className="w-full flex flex-col">
               <div className=" m-auto text-center pt-52">
                 <span className="material-icons-outlined text-9xl">book</span>
-                <p className="font-serif text-xl text-center">
+                <p className=" text-xl text-center">
                   {" "}
                   Gestor de proyectos <br /> modulares{" "}
                 </p>
