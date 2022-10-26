@@ -32,7 +32,7 @@ const LayoutAdmin = ({ children, nombre, user, estado, codigo }) => {
               Documentación
             </p>
             <SidebarButtonA href="/dashboard_busquedas" nombre="Busquedas" icono="format_list_bulleted" />
-            <SidebarButtonA href="/dashboard_registrar" nombre="Registrar" icono="note_add" />
+            <SidebarButtonA href="/dashboard_registrarA" nombre="Registrar" icono="note_add" />
           </div>
           <div>
             <p className="text-green-500 justify-center border-b border-green-500 flex items-center">
