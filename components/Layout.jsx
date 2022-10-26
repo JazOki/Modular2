@@ -71,14 +71,14 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
               </p>
               <SidebarButton href="/dashboard_registro" nombre="Registrar" icono="description" />
               <SidebarButton href="/dashboard_modificaciones" nombre="Modificaciones" icono="note_alt" />
-              <SidebarButton href="/dashboard_consultasd" nombre="Consultas" icono="source" />
+              <SidebarButton href="/dashboard_consultas" nombre="Consultas" icono="source" />
               <SidebarButton href="/dashboard_observaciones" nombre="Observaciones" icono="find_in_page" />
             </div>
             <div>
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
                 Configuraciones
               </p>
-              <SidebarButton nombre="Perfil" icono="person" />
+              <SidebarButton href="/dashboard_perfil" nombre="Perfil" icono="person" />
               <a href="#" onClick={()=>{
                 if(window.watsonInstance){
                   window.watsonInstance.destroySession()
