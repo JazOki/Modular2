@@ -32,51 +32,56 @@ const Consultas = () => {
           <form>
             <div className="grid grid-cols-2 gap-5 p-6 md:p-8 text-center md:text-left">
               <div className="w-full flex flex-col justify-end">
-                <p className="font-serif text-xl text-black-600 ">
+                <p className=" text-xl text-black-600 ">
                   Etapas:
                 </p>
                 <select
                   name="select"
-                  className="font-serif text-black-600 w-auto outline-double outline-3"
+                  className=" text-black-600 w-auto outline-double outline-3"
                 >
                   <option value="etapa1">Etapa 1: Planteamiento del problema </option>
                   <option value="etapa2">Etapa 2: Resumen del protyecto </option>
                   <option value="etapa3">Etapa 3: Documentación final </option>
                 </select>
               </div>
-              <p className="font-serif text-xl text-black ">
+              <p className=" text-xl text-black ">
                 Estado:
                 <input
                   type="text"
                   className="text-black outline-double outline-3 w-full" readOnly
+                  placeholder="Estado ..."
                 ></input>
               </p>
-              <p className="font-serif text-xl text-black ">
+              <p className=" text-xl text-black ">
                 Modulo:
                 <input
                   type="text"
                   className="text-black outline-double outline-3 w-full" readOnly
+                  placeholder="Modulo actual ..."
                 ></input>
               </p>
-              <p className="font-serif text-xl text-black ">
+              <p className=" text-xl text-black ">
                 Fecha de registro:
                 <input
                   type="text"
                   className="text-black outline-double outline-3 w-full" readOnly
+                  placeholder="Fecha de registro ..."
                 ></input>
               </p>
-              <p className="font-serif text-xl text-black ">
+              <p className=" text-xl text-black ">
                 Nombre del documento:
                 <input
                   type="text"
                   className="text-black outline-double outline-3 w-full" readOnly
+                  placeholder="Nombre del documento ..."
                 ></input>
               </p>
-              <p className="font-serif text-xl text-black ">
+              <p className=" text-xl text-black ">
                 Archivo PDF registrado:
                 <input
                   type="text"
                   className="text-black outline-double outline-3 w-full" readOnly
+                  placeholder="Archivo PDF ..."
                 ></input>
               </p>
             </div>
