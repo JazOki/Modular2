@@ -4,7 +4,7 @@ const Registros = () => {
   return (
     <Layout>
       <div className="flex items-center justify-center h-full font-serif text-left text-xl bg-slate-50">
-        <div className="bg-violet-300 rounded shadow-xl">
+        <div className="bg-gray-400 rounded shadow-xl">
           <form>
             <div className="grid grid-cols-2 gap-5 p-6 md:p-8 text-center md:text-left">
               <div className="w-full flex flex-col justify-end">

@@ -41,7 +41,7 @@ const LayoutD = ({ children, nombre, codigo }) => {
             <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">
               Configuraciones
             </p>
-            <SidebarButtonD nombre="Perfil" icono="person" />
+            <SidebarButtonD href="/dashboard_perfild" nombre="Perfil" icono="person" />
             <SidebarButtonD nombre="Salir" icono="exit_to_app" />
           </div>
         </aside>

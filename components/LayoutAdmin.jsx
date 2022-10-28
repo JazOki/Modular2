@@ -5,7 +5,7 @@ import { privatePage } from "../lib/ironSessionConfig";
 const LayoutAdmin = ({ children, nombre, user, estado, codigo }) => {
   return (
     <div className="flex flex-col w-screen h-screen">
-      <header className="px-5 bg-green-600 text-right h-12 flex items-center justify-between">
+      <header className="px-5 bg-green-800 text-right h-12 flex items-center justify-between">
         <p className="ml-5 text-white font-serif flex text-center items-start px-14">
           Admin
         </p>
