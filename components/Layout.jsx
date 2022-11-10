@@ -6,6 +6,9 @@ import { privatePage } from "../lib/ironSessionConfig";
 import { useEffect } from "react";
 
 const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
+  useEffect(()=>{
+    console.log(alumno)
+  },[])
   return (
     <>
       <Script id="load-watson" dangerouslySetInnerHTML={{
@@ -78,7 +81,7 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
                 Configuraciones
               </p>
-              <SidebarButton href="/dashboard_perfil" nombre="Perfil" icono="person" />
+              <SidebarButton href="/dashboard_perfil" nombre="Perfil" icono="person"/>
               <a href="#" onClick={()=>{
                 if(window.watsonInstance){
                   window.watsonInstance.destroySession()
