@@ -20,21 +20,28 @@ export const getServerSideProps = privatePage(async (context) => {
   }
 
   try {
-    var url = `http://localhost:3000/api/getproyectobyalumnoid?matricula=${user.matricula}`;
+    const api = process.env.VERCEL_URL // Valida y obtiene la url de Vercel
+      ? 'https://' + process.env.VERCEL_URL
+      : 'http://localhost:3000'
+
+    var url = `${api}/api/getalumnobyid?matricula=${user.matricula}`;
     const response = await fetch(url, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
     })
-    const {alumno} = await response.json()
-  return {
-    props: {
-      ...user,
-      alumno
-    },
-  };
-} catch (error) {
+    const responseJson = await response.json()
+    const { alumno } = responseJson
+    return {
+      props: {
+        ...user,
+        alumno
+      },
+    };
+  } catch (error) {
+    console.log('err >>>');
+    console.log(error);
     return {
       props: {
         ...user
