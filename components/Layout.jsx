@@ -40,7 +40,6 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
           };`,
       }}
       />
-      <Script src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js" />
       <Script src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js" />
       <div className="flex flex-col w-screen h-screen">
         <header className="px-5 bg-blue-900 text-center h-12 flex items-center justify-between">
@@ -78,7 +77,7 @@ const Layout = ({ alumno, children, nombre, matricula, codigo }) => {
               <p className="text-blue-500 justify-center border-b border-blue-500 flex items-center">
                 Configuraciones
               </p>
-              <SidebarButton href="/dashboard_perfil" nombre="Perfil" icono="person" />
+              <SidebarButton href="/dashboard_perfil" nombre="Perfil" icono="person"/>
               <a href="#" onClick={()=>{
                 if(window.watsonInstance){
                   window.watsonInstance.destroySession()

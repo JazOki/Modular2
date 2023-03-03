@@ -112,7 +112,7 @@ export const getServerSideProps = privatePage((context) => {
       case "alumno":
         return {
           redirect: {
-            destination: "/dashboard_a",//cambiar
+            destination: "/dashboard",//cambiar
             permanent: false,
           },
         };
