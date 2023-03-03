@@ -63,7 +63,7 @@ const PerfilD = ({ icono }) => {
                   </p>
                   <input className="hidden" type="file" name="image-file" id="image-file" />
                 </label>
-
+{/* ... */}
 
                 <p className=" text-xl text-black mt-12">
                   Correo Institucional:

@@ -9,7 +9,7 @@ const LogIn = () => {
   const [contrasenia, setContrasenia] = useState("");
   const router = useRouter()
   const onChange = ({ currentTarget }) => setContrasenia(currentTarget.value);
-  
+
   const onSubmitLoginForm = (eventForm) => {
     // Funcion para la accion del boton
     eventForm.preventDefault(); // evitar que refresh en la pagina al darle click al boton y no se pierden la coockies ni el inicio de sesión
@@ -36,83 +36,68 @@ const LogIn = () => {
       })
       .catch((error) => console.log(error))
   };
- 
+
   return (
     <div className="flex flex-col w-screen h-screen">
-      <div className="flex flex-grow">
-        <aside className="justify-evenly bg-gray-800 font-serif">
-          <div className="flex flex-col items-center">
-            <div className="flex mr-3 text-4xl pt-24 text-center text-white flex-col">
-              <p> ¡Bienvenido! </p>
-              <span className="justify-center material-icons text-9xl">
-                account_circle
-              </span>
-            </div>
-
-            <form onSubmit={onSubmitLoginForm} className="pt-20 pl-12 pr-7">
-              <p className=" text-xl pt-5 text-white">
-                {""}
-                Correo institucional:{""}
-              </p>
-              <p className="">
-                <input
-                  type="text"
-                  value={usuario}
-                  onChange={(eventInput) => setUsuario(eventInput.target.value)} 
-                  placeholder="Matrícula"
-                ></input>{" "}
-                <span className=" text-white">
-                  {" "}
-                  @universidad-une.com{" "}
-                </span>
-              </p>
-              {/* <p className=" text-xl text-black ">
-                Escribe el nombre del proyecto:
-                <input
-                  type="text"
-                  className="text-black outline-double outline-3 w-full" placeholder="Gestor de Proyectos Modulares ..."
-                ></input>
-              </p> */}
-
-              <p className=" text-xl pt-5 text-white">
-                {""}
-                Contraseña:{""}
-              </p>
-
-              <p>
-                <input
-                  type="password"
-                  className="w-80"
-                  value={contrasenia}
-                  onChange={(eventInput) =>
-                    setContrasenia(eventInput.target.value)
-                  } placeholder="******"
-                ></input>{" "}
-                <span className="material-icons-outlined text-white">
-                  visibility
-                </span>
-              </p>
-
-              <div className=" flex pt-7 pl-24">
-                <button className=" rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
-                  Ingresar
-                </button>
-              </div>
-            </form>
-          </div>
-        </aside>
+      <div className="flex flex-grow justify-center bg-[url('/gdl.jpg')] bg-cover bg-center bg-fixed" > {/* h-14 bg-gradient-to-r from-blue-300 to-blue-400 */}
         <header>
-          {/* <div>
-            <p id="contenedorDerecho" className="w-full flex flex-col">
-              <div className=" m-auto text-center pt-52">
-                <span className="material-icons-outlined text-9xl">book</span>
-                <p className=" text-xl text-center">
-                  {" "}
-                  Gestor de proyectos <br /> modulares{" "}
-                </p>
+          <div className="flex items-center justify-center font-serif text-left text-xl bg-white">
+            <aside className="justify-center bg-gray-800 font-serif">
+              <div className="flex justify-center bg-gray-800 rounded shadow-xl">
+                <div className="flex flex-col gap-5 p-6 md:p-10 text-center md:text-left">
+                  <div className="flex mr-3 text-4xl pt-24 text-center text-white flex-col">
+                    <p> ¡Bienvenido! </p>
+                    <span className="justify-center material-icons text-9xl">
+                      account_circle
+                    </span>
+                  </div>
+                  <form onSubmit={onSubmitLoginForm} className="pt-20 pl-12 pr-7">
+                    <p className=" text-xl justify-center text-white">
+                      {""}
+                      Correo institucional:{""}
+                    </p>
+                    <p className="">
+                      <input
+                        type="text"
+                        value={usuario}
+                        onChange={(eventInput) => setUsuario(eventInput.target.value)}
+                        placeholder="Matrícula"
+                      ></input>{" "}
+                      <span className=" text-white">
+                        {" "}
+                        @universidad-une.com{" "}
+                      </span>
+                    </p>
+
+                    <p className=" text-xl pt-5 text-white">
+                      {""}
+                      Contraseña:{""}
+                    </p>
+
+                    <p>
+                      <input
+                        type="password"
+                        className="w-80"
+                        value={contrasenia}
+                        onChange={(eventInput) =>
+                          setContrasenia(eventInput.target.value)
+                        } placeholder="******"
+                      ></input>{" "}
+                      <span className="material-icons-outlined text-white">
+                        visibility
+                      </span>
+                    </p>
+
+                    <div className=" flex justify-center pt-5">
+                      <button className=" rounded w-36 h-14 transition bg-white hover:-translate-y-1 hover:scale-110 hover:bg-gray-300 duration-150">
+                        Ingresar
+                      </button>
+                    </div>
+                  </form>
+                </div>
               </div>
-            </p>
-          </div> */}
+            </aside>
+          </div>
         </header>
       </div>
     </div>
@@ -127,7 +112,7 @@ export const getServerSideProps = privatePage((context) => {
       case "alumno":
         return {
           redirect: {
-            destination: "/dashboard_d",//cambiar
+            destination: "/dashboard_a",//cambiar
             permanent: false,
           },
         };

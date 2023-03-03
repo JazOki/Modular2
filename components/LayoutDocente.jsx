@@ -27,10 +27,15 @@ const LayoutD = ({ children, nombre, codigo }) => {
             <span className="text-white flex justify-center material-icons text-9xl">
               account_circle
             </span>
-            {/* <p className="text-white font-serif flex items-center">
-              Código: {codigo}
-            </p> */}
           </div>
+          {/* <label htmlFor="image-file">
+            <p className="items-center flex flex-col">
+              <span className="text-white material-icons text-9xl">
+                account_circle
+              </span>
+            </p>
+            <input className="hidden" type="file" name="image-file" id="image-file" />
+          </label> */}
           <div>
             <p className="text-purple-500 justify-center border-b border-purple-500 flex items-center">
               Documentación
@@ -55,13 +60,13 @@ const LayoutD = ({ children, nombre, codigo }) => {
 export const getServerSideProps = privatePage((context) => {
   const user = context.req.session.user; //si hay un usuario
   if (!user) {
-        return {
-          redirect: {
-            destination: "/api/logout",
-            permanent: false,
-          },
-        };
-    
+    return {
+      redirect: {
+        destination: "/api/logout",
+        permanent: false,
+      },
+    };
+
   }
   return {
     props: {},
